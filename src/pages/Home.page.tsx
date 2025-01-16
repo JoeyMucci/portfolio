@@ -1,10 +1,12 @@
+import { SideNavBar } from '@/components/SideNavBar/SideNavBar';
 import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle';
-import { Center, Text, Button, useMantineColorScheme } from '@mantine/core';
+import { Center, Text, Button, Group, useMantineColorScheme } from '@mantine/core';
 
 export function HomePage() {
   const { colorScheme } = useMantineColorScheme();
   return (
-    <>
+    <Group>
+      <SideNavBar />
       <ColorSchemeToggle />
 
       <Center>
@@ -16,6 +18,6 @@ export function HomePage() {
           Blah Blah Blah 
         </Text>
       </Center>
-    </>
+    </Group>
   );
 }
