@@ -9,7 +9,9 @@ import {
     IconTargetArrow,
     IconGraph,
     IconNews,
-    IconFlame
+    IconFlame,
+    IconMoonStars,
+    IconSun,
   } from '@tabler/icons-react';
 
 const navButtons = [
@@ -24,31 +26,66 @@ const navButtons = [
 ]
 
 export function SideNavBar()  {
-    const { colorScheme } = useMantineColorScheme();
+    const { colorScheme, setColorScheme } = useMantineColorScheme();
 
     return (
         <nav className={classes.navbar} style={{backgroundColor : colorScheme === 'light' ? theme.colors!.pink![4] : theme.colors!.orange![6]}}>
             <Stack justify="center" gap={0}>
                 {navButtons.map((nButt, i) => 
                     <Tooltip 
-                      key={i}
-                      label={nButt.label}  
-                      color={colorScheme === 'light' ? theme.colors!.pink![4] : theme.colors!.orange![6]} 
-                      style={colorScheme === 'dark' ? {color: theme.colors!.dark![7] } : {}}
-                      position="right" 
-                      transitionProps={{ duration : 0 }}
-                      offset={20}
+                    key={i}
+                    label={nButt.label}  
+                    color={colorScheme === 'light' ? theme.colors!.pink![4] : theme.colors!.orange![6]} 
+                    style={colorScheme === 'dark' ? {color: theme.colors!.dark![7] } : {}}
+                    position="right" 
+                    transitionProps={{ duration : 0 }}
+                    offset={20}
                     >
                         <UnstyledButton className={classes.element}>
                             <nButt.Icon 
-                              size={35} 
-                              stroke={1.5}
-                              color={colorScheme === 'light' ? theme.colors!.lightBlue![4] : theme.colors!.dark![7]}
+                            size={35} 
+                            stroke={1.5}
+                            color={colorScheme === 'light' ? theme.colors!.lightBlue![4] : theme.colors!.dark![7]}
                             />
                         </UnstyledButton>
                     </Tooltip>
                 )}
             </Stack>
+            
+            {colorScheme === 'light' ? (
+                <Tooltip
+                    label="Dark Mode"
+                    color={theme.colors!.pink![4]}
+                    position="right" 
+                    transitionProps={{ duration : 0 }}
+                    offset={20}
+                >
+                    <UnstyledButton onClick={() => setColorScheme('dark')} className={classes.bottomElement}>
+                        <IconMoonStars
+                            size={35} 
+                            stroke={1.5}
+                            color={theme.colors!.lightBlue![4]}
+                        />
+                    </UnstyledButton>
+                </Tooltip>
+            ) : (
+                <Tooltip
+                    label="Light Mode"
+                    color={theme.colors!.orange![6]}
+                    style={{color: theme.colors!.dark![7]}}
+                    position="right" 
+                    transitionProps={{ duration : 0 }}
+                    offset={20}
+                >
+                    <UnstyledButton onClick={() => setColorScheme('light')} className={classes.bottomElement}>
+                        <IconSun
+                            size={35} 
+                            stroke={1.5}
+                            color={theme.colors!.dark![7]}
+                        />
+                    </UnstyledButton>
+                </Tooltip>
+            )}
         </nav>
     )
 }

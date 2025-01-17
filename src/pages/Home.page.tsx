@@ -1,23 +1,271 @@
 import { SideNavBar } from '@/components/SideNavBar/SideNavBar';
-import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle';
-import { Center, Text, Button, Group, useMantineColorScheme } from '@mantine/core';
+// import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle';
+import { Text, Stack } from '@mantine/core';
 
 export function HomePage() {
-  const { colorScheme } = useMantineColorScheme();
+  // const { colorScheme } = useMantineColorScheme();
+  // return (
+  //   <Group>
+  //     <SideNavBar />
+  //     <ColorSchemeToggle />
+
+  //     <Center>
+  //       <Button color={colorScheme === 'light' ? 'pink' : 'orange'}  >
+  //         Responsive Button
+  //       </Button>    
+
+  //       <Text>
+  //         Blah Blah Blah 
+  //       </Text>
+  //     </Center>
+  //   </Group>
+  // );
+
   return (
-    <Group>
+    <>
       <SideNavBar />
-      <ColorSchemeToggle />
-
-      <Center>
-        <Button color={colorScheme === 'light' ? 'pink' : 'orange'}  >
-          Responsive Button
-        </Button>    
-
+      <Stack align="center">
         <Text>
-          Blah Blah Blah 
+          bruh
         </Text>
-      </Center>
-    </Group>
-  );
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+        <Text>
+          bruh
+        </Text>
+      </Stack>
+    </>
+  )
 }
