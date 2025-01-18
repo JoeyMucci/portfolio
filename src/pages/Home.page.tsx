@@ -26,244 +26,244 @@ export function HomePage() {
       <SideNavBar />
       <Stack align="center">
         <Text>
-          bruh
+          QWERTYUIOPLKJHGFDSAZXCVBNM
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
         <Text>
-          bruh
+          qwertyuioplkjhgfdsxcvbnm
         </Text>
       </Stack>
     </>

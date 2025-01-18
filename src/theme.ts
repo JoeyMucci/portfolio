@@ -1,4 +1,4 @@
-import { createTheme } from '@mantine/core';
+import { createTheme, rem } from '@mantine/core';
 
 export const theme = createTheme({
   colors: {
@@ -58,5 +58,21 @@ export const theme = createTheme({
   primaryShade: { light: 4, dark: 6},
 
   white: 'lightBlue',
-  autoContrast: true
+  autoContrast: true,
+
+  fontFamily: `Patrick Hand`,
+
+  fontFamilyMonospace: 'Monaco, Courier, monospace',
+
+  headings : {
+    fontFamily: `Patrick Hand`
+  },
+
+  fontSizes: {
+    xs: rem(11),
+    sm: rem(16),
+    md: rem(21),
+    lg: rem(26),
+    xl: rem(31),
+  },
 });
