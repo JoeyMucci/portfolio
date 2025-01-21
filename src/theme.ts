@@ -69,10 +69,10 @@ export const theme = createTheme({
   },
 
   fontSizes: {
-    xs: rem(11),
-    sm: rem(16),
-    md: rem(21),
-    lg: rem(26),
-    xl: rem(31),
+    xs: rem(10),
+    sm: rem(20),
+    md: rem(30),
+    lg: rem(40),
+    xl: rem(50),
   },
 });
