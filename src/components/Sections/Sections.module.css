@@ -6,3 +6,7 @@
     -ms-user-select: none;
     user-select: none;
 }
+
+.lightBlueHover:hover {
+    background-color: var(--mantine-color-lightBlue-2);
+}
