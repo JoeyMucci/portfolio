@@ -36,9 +36,10 @@ export function HomePage() {
     <>
       <SideNavBar />     
       <Stack align="center">
-        {Sections.map((Section) => {
+        {Sections.map((Section, i) => {
           return (
             <Section
+              key={i}
               main={colorScheme === 'light' ? lightMain : darkMain}
               sec={colorScheme === 'light' ? lightSec : darkSec}
               isFull={largeScreen as boolean}

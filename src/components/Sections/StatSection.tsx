@@ -1,11 +1,9 @@
-
-import { Paper, Stack, Text, Group } from '@mantine/core'
-import { useHover } from '@mantine/hooks';
+import { Stack, Group } from '@mantine/core'
 import axios from 'axios';
 import { useState, FC } from 'react';
 import ColorProps from "@/types/ColorProps"
 import { SectionHeader } from '../SectionHeader/SectionHeader';
-import classes from './Sections.module.css';
+import { BigNumber } from '../BigNumber/BigNumber';
  
 export const Stats : FC<ColorProps> = ({main, sec, isFull}) => {
   const chessPath : string = `https://api.chess.com/pub/player/joeypat11/stats`
@@ -15,111 +13,98 @@ export const Stats : FC<ColorProps> = ({main, sec, isFull}) => {
   const [chessRating, setChessRating] = useState<number | string>("Loading..." )
   const [leetcodeRating, setLeetcodeRating] = useState<number | string>("Loading...")
 
-  interface StatProps {
-    description: string
-    value: string
-    url : string
-  }
+  axios.get(chessPath).then(
+    (response) => {
+        setChessRating(response.data.chess_rapid.last.rating)
+    },
+    (_) => {
+      setChessRating('Unavailable')
+    }
+  )
 
-  const Stat : FC<StatProps> = ({description, value, url}) => {
-    const { hovered, ref } = useHover();
+  axios.get(leetPath).then(
+    (response) => {
+      setLeetcodeRating(Math.round(response.data.data.userContestRanking.rating))
+    },
+    (_) => {
+      setLeetcodeRating('Unavailable')
+    }
+  )
+
+  const Chess = () => {
     return (
-      <>
-        <Paper 
-          ref={ref} 
-          onClick={() => window.open(url, '_blank')} 
-          radius="lg" 
-          style={hovered ? {backgroundColor : sec, width : "100%", opacity : .75} : {backgroundColor : sec, width : "100%"}}
-        >
-          <Stack align="center">
-            <Text className={classes.unselectable} style={{color : main, margin : "5px"}}>
-              {description}
-            </Text>
-            <Text className={classes.unselectable} fw={700} style={{color : main}} size="xl">
-              {value}
-            </Text>
-          </Stack>
-        </Paper>
-      </>
+      <BigNumber
+        description="Live Chess.Com Rapid Rating"
+        value={chessRating as string}
+        url="https://www.chess.com/stats/live/rapid/joeypat11"
+        main={main}
+        sec={sec}
+      />
     )
   }
 
-    axios.get(chessPath).then(
-      (response) => {
-          setChessRating(response.data.chess_rapid.last.rating)
-      },
-      (_) => {
-        setChessRating('Unavailable')
-      }
+  const Leetcode = () => {
+    return (
+      <BigNumber 
+        description="Live Leetcode Contest Rating"
+        value={leetcodeRating as string}
+        url="https://leetcode.com/u/jmucc314/"
+        main={main}
+        sec={sec}
+      />
     )
+  }
 
-    axios.get(leetPath).then(
-      (response) => {
-        setLeetcodeRating(Math.round(response.data.data.userContestRanking.rating))
-      },
-      (_) => {
-        setLeetcodeRating('Unavailable')
-      }
+  const HalfMile = () => {
+    return (
+      <BigNumber
+        description="800m PR"
+        value="1:55.96"
+        url="https://www.tfrrs.org/athletes/7929457/New_Jersey_Institute_Technolog/Joey_Mucci.html"
+        main={main}
+        sec={sec}
+      />
     )
+  }
+
+  const Mile = () => {
+    return (
+      <BigNumber
+        description="Mile PR"
+        value="4:24.62"
+        url="https://www.tfrrs.org/athletes/7929457/New_Jersey_Institute_Technolog/Joey_Mucci.html"
+        main={main}
+        sec={sec}
+      />
+    )
+  }
     
-    return (
-      <>
-        <SectionHeader
-          name="Stats"
-          desc="My Marks in Various Endeavors I Compete in For Fun"
-          col={sec}
-        />
-        {isFull ? (
-            <Group>
-              <Stack align="center" gap="lg">
-                <Stat
-                  description="Live Chess.Com Rapid Rating"
-                  value={chessRating as string}
-                  url="https://www.chess.com/stats/live/rapid/joeypat11"
-                />
-                <Stat
-                  description="800m PR"
-                  value="1:55.96"
-                  url="https://www.tfrrs.org/athletes/7929457/New_Jersey_Institute_Technolog/Joey_Mucci.html"
-                />
-              </Stack>
-              <Stack align="center" gap="lg">
-                <Stat
-                  description="Live Leetcode Contest Rating"
-                  value={leetcodeRating as string}
-                url="https://leetcode.com/u/jmucc314/"
-              />
-                <Stat
-                  description="Mile PR"
-                  value="4:28.83"
-                  url="https://www.tfrrs.org/athletes/7929457/New_Jersey_Institute_Technolog/Joey_Mucci.html"
-                />
-              </Stack>
-            </Group>
-        ) : (
-          <Stack>
-            <Stat
-              description="Live Chess.Com Rapid Rating"
-              value={chessRating as string}
-              url="https://www.chess.com/stats/live/rapid/joeypat11"
-            />
-            <Stat
-              description="Live Leetcode Contest Rating"
-              value={leetcodeRating as string}
-              url="https://leetcode.com/u/jmucc314/"
-            />
-            <Stat
-              description="800m PR"
-              value="1:55.96"
-              url="https://www.tfrrs.org/athletes/7929457/New_Jersey_Institute_Technolog/Joey_Mucci.html"
-            />
-            <Stat
-              description="Mile PR"
-              value="4:28.83"
-              url="https://www.tfrrs.org/athletes/7929457/New_Jersey_Institute_Technolog/Joey_Mucci.html"
-            />
-          </Stack>
-        )}
-      </>
-    )
+  return (
+    <>
+      <SectionHeader
+        name="Stats"
+        desc="My Marks in Various Endeavors I Compete in For Fun"
+        col={sec}
+      />
+      {isFull ? (
+          <Group>
+            <Stack align="center" gap="lg">
+              <Chess />
+              <HalfMile />
+            </Stack>
+            <Stack align="center" gap="lg">
+              <Leetcode />
+              <Mile />
+            </Stack>
+          </Group>
+      ) : (
+        <Stack>
+          <Chess />
+          <Leetcode />
+          <HalfMile />
+          <Mile />
+        </Stack>
+      )}
+    </>
+  )
 }

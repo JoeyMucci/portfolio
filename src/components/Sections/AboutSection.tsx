@@ -20,7 +20,7 @@ interface BulletProps {
 const pointToDesc = {
     "Software Development" : `I love coding and building things so this is
     my ideal career path at the moment. I am slightly more interested in low-level
-    programming but I am open to trying new things since I am very young in my dev career`,
+    programming but I am open to trying new things since I am very young in my career`,
 
     "Actuarial Science" : `Math has always been something I enjoyed, so any career path that
     relied upon passing math exams was fine by me. I have enjoyed and learned a lot through
@@ -54,9 +54,9 @@ export const About : FC<ColorProps> = ({main, sec}) => {
                     {name}
                 </Button>
                 <Collapse in={opened}>
+                    <Accordion style={{color : sec}}>
                     {bullets.map((bullet, i) => {
                         return (
-                            <Accordion style={{color : sec}}>
                                 <Accordion.Item key={i} value={i.toString()}>
                                     <Accordion.Control 
                                       className={main===theme.colors!.lightBlue![4] ? classes.lightBlueHover : ""}
@@ -66,10 +66,10 @@ export const About : FC<ColorProps> = ({main, sec}) => {
                                         {bullet.name}
                                     </Accordion.Control>
                                     <Accordion.Panel><Text size="sm">{bullet.desc}</Text></Accordion.Panel>
-                                </Accordion.Item>
-                            </Accordion>
+                                </Accordion.Item> 
                         )
                     })}
+                    </Accordion>
                 </Collapse>
             </>
         )
