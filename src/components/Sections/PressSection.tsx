@@ -1,8 +1,8 @@
 import { SectionHeader } from '../SectionHeader/SectionHeader'
-import ColorProps from "@/types/ColorProps"
+import StyleProps from "@/types/StyleProps"
 import { FC } from 'react'
 
-export const Press : FC<ColorProps> = ({main, sec, isFull}) => {
+export const Press : FC<StyleProps> = ({main, sec, isFull}) => {
 
     return (
         <>

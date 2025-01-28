@@ -1,8 +1,8 @@
 import { SectionHeader } from '../SectionHeader/SectionHeader'
-import ColorProps from "@/types/ColorProps"
+import StyleProps from "@/types/StyleProps"
 import { FC } from 'react'
 
-export const Skills : FC<ColorProps> = ({main, sec, isFull}) => {
+export const Skills : FC<StyleProps> = ({main, sec, isFull}) => {
 
     return (
         <>

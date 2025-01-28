@@ -1,7 +1,7 @@
 import { Image, Button, Collapse, Accordion, Text, Stack } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
 import { SectionHeader } from '../SectionHeader/SectionHeader'
-import ColorProps from "@/types/ColorProps"
+import StyleProps from "@/types/StyleProps"
 import { FC } from 'react'
 import { theme } from '../../../src/theme';
 import classes from './Sections.module.css'
@@ -43,14 +43,14 @@ const pointToDesc = {
     since I was little, and have built up a strong contingent of sea dwellers, food items, and toads`,
 }
 
-export const About : FC<ColorProps> = ({main, sec}) => {
+export const About : FC<StyleProps> = ({main, sec}) => {
     const AboutSubsection : FC<DropdownProps> = ({name, bullets}) => {
         const [opened, { toggle }] = useDisclosure(false);
 
 
         return (
             <>
-                <Button color={sec} style={{color : main}} onClick={toggle}>
+                <Button color={sec} style={{color : main}} onClick={toggle} radius="lg">
                     {name}
                 </Button>
                 <Collapse in={opened}>

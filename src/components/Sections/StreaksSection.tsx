@@ -1,11 +1,11 @@
 import { SectionHeader } from '../SectionHeader/SectionHeader'
 import { BigNumber } from '../BigNumber/BigNumber'
-import ColorProps from "@/types/ColorProps"
+import StyleProps from "@/types/StyleProps"
 import { useState, FC } from 'react'
 import { Group, Stack } from '@mantine/core'
 import axios from 'axios';
 
-export const Streaks : FC<ColorProps> = ({main, sec, isFull}) => {
+export const Streaks : FC<StyleProps> = ({main, sec, isFull}) => {
     const [ currentWordle, setCurrentWordle ] = useState<number | string>("Loading...");
     const [ maxWordle, setMaxWordle ] = useState<number | string>("Loading...");
     const [ currentConnections, setCurrentConnections ] = useState<number | string>("Loading...");

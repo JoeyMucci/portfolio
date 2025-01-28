@@ -1,11 +1,11 @@
 import { Stack, Group } from '@mantine/core'
 import axios from 'axios';
 import { useState, FC } from 'react';
-import ColorProps from "@/types/ColorProps"
+import StyleProps from "@/types/StyleProps"
 import { SectionHeader } from '../SectionHeader/SectionHeader';
 import { BigNumber } from '../BigNumber/BigNumber';
  
-export const Stats : FC<ColorProps> = ({main, sec, isFull}) => {
+export const Stats : FC<StyleProps> = ({main, sec, isFull}) => {
   const chessPath : string = `https://api.chess.com/pub/player/joeypat11/stats`
   const leetPath : string = `${import.meta.env.VITE_PROXY_URL}/https://leetcode.com/graphql?query=query%20%7B%20userContestRanking
   (username%3A%20%22jmucc314%22)%20%7B%20rating%20%7D%20%7D`

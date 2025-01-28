@@ -33,13 +33,13 @@ export function SideNavBar()  {
             <Stack justify="center" gap={0}>
                 {navButtons.map((nButt, i) => 
                     <Tooltip 
-                    key={i}
-                    label={nButt.label}  
-                    color={colorScheme === 'light' ? theme.colors!.pink![4] : theme.colors!.orange![6]} 
-                    style={colorScheme === 'dark' ? {color: theme.colors!.dark![7] } : {}}
-                    position="right" 
-                    transitionProps={{ duration : 0 }}
-                    offset={20}
+                      key={i}
+                      label={nButt.label}  
+                      color={colorScheme === 'light' ? theme.colors!.pink![4] : theme.colors!.orange![6]} 
+                      style={colorScheme === 'dark' ? {color: theme.colors!.dark![7] } : {}}
+                      position="right" 
+                      transitionProps={{ duration : 0 }}
+                      offset={20}
                     >
                         <UnstyledButton className={classes.element}>
                             <nButt.Icon 
