@@ -20,6 +20,20 @@ interface BackProps {
 }
 
 export const School : FC<StyleProps> = ({main, sec}) => {
+    const labels = Object.freeze({
+        HOME : 0,
+        LEADERSHIP : 1,
+        STUDIES : 2,
+        GIVING : 3,
+        CROSS : 4, 
+        FINACT : 5,
+        MATH : 6, 
+        CS: 7,
+        TA : 8,
+        VOLUNTEER : 9,
+        OL : 10
+    })
+
     const Link : FC<LinkProps> = ({destination, text}) => {
         return (
             <Text 
@@ -66,23 +80,127 @@ export const School : FC<StyleProps> = ({main, sec}) => {
         return (
             <>
                 <Text ta="center" mx="2" className={classes.unselectable} style={{color : main}}>
-                    I attend the New Jersey Institute of Technology where I{" "}
-                    <Link destination={1} text="lead" />{", "}
-                    <Link destination={1} text="study" />{", and "}
-                    <Link destination={1} text="give back" />
+                    I attend the Albert Dorman Honors College at New Jersey Institute of Technology where I{" "}
+                    <Link destination={labels.LEADERSHIP} text="lead" />{", "}
+                    <Link destination={labels.STUDIES} text="study" />{", and "}
+                    <Link destination={labels.GIVING} text="give back" />
                 </Text>
             </>
         )
     }
 
-    const Lead : FC<StyleProps> = ({main, sec}) => {
+    const Leadership : FC<StyleProps> = ({main, sec}) => {
         return (
             <>
-                <BackArrow destination={0} main={main} sec={sec} title="Leadership" />
+                <BackArrow destination={labels.HOME} main={main} sec={sec} title="Leadership" />
                 <Text ta="center" mx="2" className={classes.unselectable} style={{color : main}}>
                     Some campus activities in which I help teams succeed are{" "}
-                    <Link destination={1} text="Cross Country/Track & Field" />{" and "}
-                    <Link destination={1} text="Finance & Actuarial Society" />
+                    <Link destination={labels.CROSS} text="Cross Country/Track & Field" />{" and "}
+                    <Link destination={labels.FINACT} text="Finance & Actuarial Society" />
+                </Text>
+            </>
+        )
+    }
+
+    const Studies : FC<StyleProps> = ({main, sec}) => {
+        return (
+            <>
+                <BackArrow destination={labels.HOME} main={main} sec={sec} title="Studies" />
+                <Text ta="center" mx="2" className={classes.unselectable} style={{color : main}}>
+                    I am majoring in{" "}
+                    <Link destination={labels.MATH} text="Applied Mathematics" />{" and "}
+                    <Link destination={labels.CS} text="Computer Science" />{" with a 4.0 GPA"}
+                </Text>
+            </>
+        )
+    }
+
+    const Giving : FC<StyleProps> = ({main, sec}) => {
+        return (
+            <>
+                <BackArrow destination={labels.HOME} main={main} sec={sec} title="Giving Back" />
+                <Text ta="center" mx="2" className={classes.unselectable} style={{color : main}}>
+                    Some roles I play in NJIT/Newark are{" "}
+                    <Link destination={labels.TA} text="Teacher Assistant" />{", "}
+                    <Link destination={labels.VOLUNTEER} text="Volunteer" />{", and "}
+                    <Link destination={labels.OL} text="Orientation Leader" />
+                </Text>
+            </>
+        )
+    }
+
+    const Cross : FC<StyleProps> = ({main, sec}) => {
+        return (
+            <>
+                <BackArrow destination={labels.LEADERSHIP} main={main} sec={sec} title="XC/TF Captain" />
+                <Text ta="center" mx="2" className={classes.unselectable} style={{color : main}}>
+                    As captain of NJIT's Cross Country team I served as a role model and kept the team on task during competition
+                </Text>
+            </>
+        )
+    }
+
+    const FinAct : FC<StyleProps> = ({main, sec}) => {
+        return (
+            <>
+                <BackArrow destination={labels.LEADERSHIP} main={main} sec={sec} title="Actuarial Club President" />
+                <Text ta="center" mx="2" className={classes.unselectable} style={{color : main}}>
+                    As president, I organize club meetings and work with the rest of the executive board on budgeting and publicity
+                </Text>
+            </>
+        )
+    }
+
+    const Math : FC<StyleProps> = ({main, sec}) => {
+        return (
+            <>
+                <BackArrow destination={labels.STUDIES} main={main} sec={sec} title="Math Major" />
+                <Text ta="center" mx="2" className={classes.unselectable} style={{color : main}}>
+                    Some of the most engaging courses I've taken are differential equations, analysis, and linear algebra
+                </Text>
+            </>
+        )
+    }
+
+    const CS : FC<StyleProps> = ({main, sec}) => {
+        return (
+            <>
+                <BackArrow destination={labels.STUDIES} main={main} sec={sec} title="CS Major" />
+                <Text ta="center" mx="2" className={classes.unselectable} style={{color : main}}>
+                    I've enjoyed linux programming, data structures, and the capstone course, where I built a project with a team
+                </Text>
+            </>
+        )
+    }
+
+    const TA : FC<StyleProps> = ({main, sec}) => {
+        return (
+            <>
+                <BackArrow destination={labels.GIVING} main={main} sec={sec} title="First Year Seminar TA" />
+                <Text ta="center" mx="2" className={classes.unselectable} style={{color : main}}>
+                    As a three-time TA, I guided a cohort of first year students in a research project to improve NJIT's biodiversity
+                </Text>
+            </>
+        )
+    }
+
+    const Volunteer : FC<StyleProps> = ({main, sec}) => {
+        return (
+            <>
+                <BackArrow destination={labels.GIVING} main={main} sec={sec} title="Volunteering" />
+                <Text ta="center" mx="2" className={classes.unselectable} style={{color : main}}>
+                    My most impactful and rewarding service opportunity have been teaching scratch coding at a local middle school
+                </Text>
+            </>
+        )
+    }
+
+    const OL : FC<StyleProps> = ({main, sec}) => {
+        return (
+            <>
+                <BackArrow destination={labels.GIVING} main={main} sec={sec} title="Orientation Leader" />
+                <Text ta="center" mx="2" className={classes.unselectable} style={{color : main}}>
+                    As an OL, I introduced NJIT to incoming students and learned how to deal with difficult people and stressful situations
                 </Text>
             </>
         )
@@ -104,8 +222,17 @@ export const School : FC<StyleProps> = ({main, sec}) => {
                   h={250}
                   justify="center"
                 >
-                    {cardIndex === 0 && <Home main={main} sec={sec} />}
-                    {cardIndex === 1 && <Lead main={main} sec={sec} />}
+                    {cardIndex === labels.HOME && <Home main={main} sec={sec} />}
+                    {cardIndex === labels.LEADERSHIP && <Leadership main={main} sec={sec} />}
+                    {cardIndex === labels.STUDIES && <Studies main={main} sec={sec} />}
+                    {cardIndex === labels.GIVING && <Giving main={main} sec={sec} />}
+                    {cardIndex === labels.CROSS && <Cross main={main} sec={sec} />}
+                    {cardIndex === labels.FINACT && <FinAct main={main} sec={sec} />}
+                    {cardIndex === labels.MATH && <Math main={main} sec={sec} />}
+                    {cardIndex === labels.CS && <CS main={main} sec={sec} />}
+                    {cardIndex === labels.TA && <TA main={main} sec={sec} />}
+                    {cardIndex === labels.VOLUNTEER && <Volunteer main={main} sec={sec} />}
+                    {cardIndex === labels.OL && <OL main={main} sec={sec} />}
                 </Stack>
             </Paper>
         </>
