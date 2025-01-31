@@ -59,7 +59,7 @@ export const Stats : FC<StyleProps> = ({main, sec, isFull}) => {
     return (
       <BigNumber
         description="800m PR"
-        value="1:55.96"
+        value="1:54.50"
         url="https://www.tfrrs.org/athletes/7929457/New_Jersey_Institute_Technolog/Joey_Mucci.html"
         main={main}
         sec={sec}
