@@ -3,7 +3,7 @@ import { useDisclosure } from '@mantine/hooks'
 import { SectionHeader } from '../SectionHeader/SectionHeader'
 import StyleProps from "@/types/StyleProps"
 import { FC } from 'react'
-import { theme } from '../../../src/theme';
+import { theme } from '../../../src/theme'
 import classes from './Sections.module.css'
 
 interface DropdownProps {
@@ -19,12 +19,12 @@ interface BulletProps {
 
 const pointToDesc = {
     "Software Development" : `I love coding and building things so this is
-    my ideal career path at the moment. I am slightly more interested in low-level
+    a career path I know I'd find fulfilling. I am slightly more interested in low-level
     programming but I am open to trying new things since I am very young in my career`,
 
     "Actuarial Science" : `Math has always been something I enjoyed, so any career path that
-    relied upon passing math exams was fine by me. I have enjoyed and learned a lot through
-    my internships in this field, but am currently looking for new challenges, at least for now`,
+    relied upon passing math exams was fine by me. I have grown and learned a lot through
+    my internships in this field, particular how to share technical expertise within a business context`,
 
     "Running" : `I train to become a better runner pretty much every day. At this point it is more
     of a lifestyle than a hobby, but I enjoy it (sometimes)`,
@@ -85,16 +85,16 @@ export const About : FC<StyleProps> = ({main, sec}) => {
             <Image
                 radius="md"
                 w={300}
-                src="/src/headshot.png"
+                src="/src/imgs/headshot.png"
                 style={{borderColor: sec, borderWidth: "5px", borderStyle: "solid"}}
             />
             <Stack w={350}>
                 <AboutSubsection 
-                name="Professional Interests"
-                bullets={[
-                    {name : "Software Development", desc : pointToDesc["Software Development"], icon : "👨‍💻"},
-                    {name : "Actuarial Science", desc : pointToDesc["Actuarial Science"], icon : "🧮"},
-                ]}
+                  name="Professional Interests"
+                  bullets={[
+                      {name : "Software Development", desc : pointToDesc["Software Development"], icon : "👨‍💻"},
+                      {name : "Actuarial Science", desc : pointToDesc["Actuarial Science"], icon : "🧮"},
+                  ]}
                 />
 
                 <AboutSubsection 

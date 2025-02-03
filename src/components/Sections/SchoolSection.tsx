@@ -1,6 +1,6 @@
 import { SectionHeader } from '../SectionHeader/SectionHeader'
 import StyleProps from '@/types/StyleProps'
-import { Text, Tooltip, MantineColor, Stack, Center, Paper } from '@mantine/core'
+import { Text, Tooltip, Stack, Center, Paper } from '@mantine/core'
 import classes from '../Sections/Sections.module.css' 
 import { useState, FC } from 'react'
 import {
@@ -14,8 +14,6 @@ interface LinkProps {
 
 interface BackProps {
     destination : number
-    main : MantineColor
-    sec : MantineColor
     title : string
 }
 
@@ -48,7 +46,7 @@ export const School : FC<StyleProps> = ({main, sec}) => {
         )  
     }
 
-    const BackArrow : FC<BackProps> = ({destination, main, sec, title}) => {
+    const BackArrow : FC<BackProps> = ({destination, title}) => {
         return (
             <>
                 <Center inline style={{position : "relative"}}>
@@ -76,7 +74,7 @@ export const School : FC<StyleProps> = ({main, sec}) => {
         )
     }
 
-    const Home : FC<StyleProps> = ({main}) => {
+    const Home = () => {
         return (
             <>
                 <Text ta="center" mx="2" className={classes.unselectable} style={{color : main}}>
@@ -89,10 +87,10 @@ export const School : FC<StyleProps> = ({main, sec}) => {
         )
     }
 
-    const Leadership : FC<StyleProps> = ({main, sec}) => {
+    const Leadership = ()  => {
         return (
             <>
-                <BackArrow destination={labels.HOME} main={main} sec={sec} title="Leadership" />
+                <BackArrow destination={labels.HOME} title="Leadership" />
                 <Text ta="center" mx="2" className={classes.unselectable} style={{color : main}}>
                     Some campus activities in which I help teams succeed are{" "}
                     <Link destination={labels.CROSS} text="Cross Country/Track & Field" />{" and "}
@@ -102,10 +100,10 @@ export const School : FC<StyleProps> = ({main, sec}) => {
         )
     }
 
-    const Studies : FC<StyleProps> = ({main, sec}) => {
+    const Studies = ()  => {
         return (
             <>
-                <BackArrow destination={labels.HOME} main={main} sec={sec} title="Studies" />
+                <BackArrow destination={labels.HOME} title="Studies" />
                 <Text ta="center" mx="2" className={classes.unselectable} style={{color : main}}>
                     I am majoring in{" "}
                     <Link destination={labels.MATH} text="Applied Mathematics" />{" and "}
@@ -115,10 +113,10 @@ export const School : FC<StyleProps> = ({main, sec}) => {
         )
     }
 
-    const Giving : FC<StyleProps> = ({main, sec}) => {
+    const Giving = ()  => {
         return (
             <>
-                <BackArrow destination={labels.HOME} main={main} sec={sec} title="Giving Back" />
+                <BackArrow destination={labels.HOME} title="Giving Back" />
                 <Text ta="center" mx="2" className={classes.unselectable} style={{color : main}}>
                     Some roles I play in NJIT/Newark are{" "}
                     <Link destination={labels.TA} text="Teacher Assistant" />{", "}
@@ -129,10 +127,10 @@ export const School : FC<StyleProps> = ({main, sec}) => {
         )
     }
 
-    const Cross : FC<StyleProps> = ({main, sec}) => {
+    const Cross = ()  => {
         return (
             <>
-                <BackArrow destination={labels.LEADERSHIP} main={main} sec={sec} title="XC/TF Captain" />
+                <BackArrow destination={labels.LEADERSHIP} title="XC/TF Captain" />
                 <Text ta="center" mx="2" className={classes.unselectable} style={{color : main}}>
                     As captain of NJIT's Cross Country team I served as a role model and kept the team on task during competition
                 </Text>
@@ -140,10 +138,10 @@ export const School : FC<StyleProps> = ({main, sec}) => {
         )
     }
 
-    const FinAct : FC<StyleProps> = ({main, sec}) => {
+    const FinAct = ()  => {
         return (
             <>
-                <BackArrow destination={labels.LEADERSHIP} main={main} sec={sec} title="Actuarial Club President" />
+                <BackArrow destination={labels.LEADERSHIP} title="Actuarial Club President" />
                 <Text ta="center" mx="2" className={classes.unselectable} style={{color : main}}>
                     As president, I organize club meetings and work with the rest of the executive board on budgeting and publicity
                 </Text>
@@ -151,10 +149,10 @@ export const School : FC<StyleProps> = ({main, sec}) => {
         )
     }
 
-    const Math : FC<StyleProps> = ({main, sec}) => {
+    const Math = ()  => {
         return (
             <>
-                <BackArrow destination={labels.STUDIES} main={main} sec={sec} title="Math Major" />
+                <BackArrow destination={labels.STUDIES} title="Math Major" />
                 <Text ta="center" mx="2" className={classes.unselectable} style={{color : main}}>
                     Some of the most engaging courses I've taken are differential equations, analysis, and linear algebra
                 </Text>
@@ -162,10 +160,10 @@ export const School : FC<StyleProps> = ({main, sec}) => {
         )
     }
 
-    const CS : FC<StyleProps> = ({main, sec}) => {
+    const CS = ()  => {
         return (
             <>
-                <BackArrow destination={labels.STUDIES} main={main} sec={sec} title="CS Major" />
+                <BackArrow destination={labels.STUDIES} title="CS Major" />
                 <Text ta="center" mx="2" className={classes.unselectable} style={{color : main}}>
                     I've enjoyed linux programming, data structures, and the capstone course, where I built a project with a team
                 </Text>
@@ -173,10 +171,10 @@ export const School : FC<StyleProps> = ({main, sec}) => {
         )
     }
 
-    const TA : FC<StyleProps> = ({main, sec}) => {
+    const TA = ()  => {
         return (
             <>
-                <BackArrow destination={labels.GIVING} main={main} sec={sec} title="First Year Seminar TA" />
+                <BackArrow destination={labels.GIVING} title="First Year Seminar TA" />
                 <Text ta="center" mx="2" className={classes.unselectable} style={{color : main}}>
                     As a three-time TA, I guided a cohort of first year students in a research project to improve NJIT's biodiversity
                 </Text>
@@ -184,10 +182,10 @@ export const School : FC<StyleProps> = ({main, sec}) => {
         )
     }
 
-    const Volunteer : FC<StyleProps> = ({main, sec}) => {
+    const Volunteer = ()  => {
         return (
             <>
-                <BackArrow destination={labels.GIVING} main={main} sec={sec} title="Volunteering" />
+                <BackArrow destination={labels.GIVING} title="Volunteering" />
                 <Text ta="center" mx="2" className={classes.unselectable} style={{color : main}}>
                     My most impactful and rewarding service opportunity have been teaching scratch coding at a local middle school
                 </Text>
@@ -195,10 +193,10 @@ export const School : FC<StyleProps> = ({main, sec}) => {
         )
     }
 
-    const OL : FC<StyleProps> = ({main, sec}) => {
+    const OL = ()  => {
         return (
             <>
-                <BackArrow destination={labels.GIVING} main={main} sec={sec} title="Orientation Leader" />
+                <BackArrow destination={labels.GIVING} title="Orientation Leader" />
                 <Text ta="center" mx="2" className={classes.unselectable} style={{color : main}}>
                     As an OL, I introduced NJIT to incoming students and learned how to deal with difficult people and stressful situations
                 </Text>
@@ -222,17 +220,17 @@ export const School : FC<StyleProps> = ({main, sec}) => {
                   h={250}
                   justify="center"
                 >
-                    {cardIndex === labels.HOME && <Home main={main} sec={sec} />}
-                    {cardIndex === labels.LEADERSHIP && <Leadership main={main} sec={sec} />}
-                    {cardIndex === labels.STUDIES && <Studies main={main} sec={sec} />}
-                    {cardIndex === labels.GIVING && <Giving main={main} sec={sec} />}
-                    {cardIndex === labels.CROSS && <Cross main={main} sec={sec} />}
-                    {cardIndex === labels.FINACT && <FinAct main={main} sec={sec} />}
-                    {cardIndex === labels.MATH && <Math main={main} sec={sec} />}
-                    {cardIndex === labels.CS && <CS main={main} sec={sec} />}
-                    {cardIndex === labels.TA && <TA main={main} sec={sec} />}
-                    {cardIndex === labels.VOLUNTEER && <Volunteer main={main} sec={sec} />}
-                    {cardIndex === labels.OL && <OL main={main} sec={sec} />}
+                    {cardIndex === labels.HOME && <Home />}
+                    {cardIndex === labels.LEADERSHIP && <Leadership />}
+                    {cardIndex === labels.STUDIES && <Studies />}
+                    {cardIndex === labels.GIVING && <Giving />}
+                    {cardIndex === labels.CROSS && <Cross />}
+                    {cardIndex === labels.FINACT && <FinAct />}
+                    {cardIndex === labels.MATH && <Math />}
+                    {cardIndex === labels.CS && <CS />}
+                    {cardIndex === labels.TA && <TA />}
+                    {cardIndex === labels.VOLUNTEER && <Volunteer />}
+                    {cardIndex === labels.OL && <OL />}
                 </Stack>
             </Paper>
         </>

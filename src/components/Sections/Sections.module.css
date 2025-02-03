@@ -7,6 +7,13 @@
     user-select: none;
 }
 
+.section {
+    border-bottom: 3px solid light-dark(var(--mantine-color-lightBlue-4), var(--mantine-color-dark-7));
+    padding-left: var(--mantine-spacing-md);
+    padding-right: var(--mantine-spacing-md);
+    padding-bottom: var(--mantine-spacing-md);
+}
+
 .leftLink {
     position: absolute;
     left : 0;
@@ -14,6 +21,10 @@
 
 .lightBlueHover:hover {
     background-color: var(--mantine-color-lightBlue-2);
+}
+
+.lightBlackHover:hover {
+    background-color: var(--mantine-color-dark-6);
 }
 
 .leftLink:hover {
