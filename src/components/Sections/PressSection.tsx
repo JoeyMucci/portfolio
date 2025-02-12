@@ -8,7 +8,7 @@ export const Press : FC<StyleProps> = ({main, sec, isFull}) => {
         <>
             <SectionHeader 
               name="Press"
-              desc='"Fame Is a Beast That You Can&#39;t Control or Be Prepared For" - Tom Holland'
+              desc="Published Articles Either Authored By Or Pertaining To Me"
               col={sec}
             />
         </>

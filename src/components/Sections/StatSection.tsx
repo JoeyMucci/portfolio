@@ -83,7 +83,7 @@ export const Stats : FC<StyleProps> = ({main, sec, isFull}) => {
     <>
       <SectionHeader
         name="Stats"
-        desc="My Marks in Various Endeavors I Compete in For Fun"
+        desc="My Marks in Various Endeavors I Compete In For Fun"
         col={sec}
       />
       {isFull ? (

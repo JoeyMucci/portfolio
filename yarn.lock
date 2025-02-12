@@ -997,6 +997,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mantine/carousel@npm:7.16.0":
+  version: 7.16.0
+  resolution: "@mantine/carousel@npm:7.16.0"
+  peerDependencies:
+    "@mantine/core": 7.16.0
+    "@mantine/hooks": 7.16.0
+    embla-carousel-react: ">=7.0.0"
+    react: ^18.x || ^19.x
+    react-dom: ^18.x || ^19.x
+  checksum: 10c0/de52c53b6ba418a61708d7619a424f250538f7b63e7468fa914f0900f0736ef87195c16b43ac1eb2bc24c440d71a5cf0928934c3f0b4a929deedb288c1cd6c99
+  languageName: node
+  linkType: hard
+
 "@mantine/core@npm:7.16.0":
   version: 7.16.0
   resolution: "@mantine/core@npm:7.16.0"
@@ -2914,6 +2927,24 @@ __metadata:
   version: 1.5.38
   resolution: "electron-to-chromium@npm:1.5.38"
   checksum: 10c0/f44715632fce33ac2444e5f0ac54684640b95bbfcdde47153e727645c33f5d18110d5af5348120a8345707c6c219d6109573b6acba56d819ca607010b75931ef
+  languageName: node
+  linkType: hard
+
+"embla-carousel-react@npm:7.1.0":
+  version: 7.1.0
+  resolution: "embla-carousel-react@npm:7.1.0"
+  dependencies:
+    embla-carousel: "npm:7.1.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.1 || ^18.0.0
+  checksum: 10c0/05e33fdb1062fde0164a0685163a5212f8e8f343fbe28e9a8e2348c989d8825d80fdcecfed485c7617d27f8f5d72b393612a3dd13ef9cffc02ef0cf21109ba51
+  languageName: node
+  linkType: hard
+
+"embla-carousel@npm:7.1.0":
+  version: 7.1.0
+  resolution: "embla-carousel@npm:7.1.0"
+  checksum: 10c0/3fcfe5b287c5d09d35dac76b6612567cf6f15abdae0bbf7d10754db9f732dd90cdfdf5bc7405d8fb3f65542bdead09971e93e024a0db9b3f1fcc653a70e733bc
   languageName: node
   linkType: hard
 
@@ -5089,6 +5120,7 @@ __metadata:
   dependencies:
     "@eslint/js": "npm:^9.15.0"
     "@ianvs/prettier-plugin-sort-imports": "npm:^4.4.0"
+    "@mantine/carousel": "npm:7.16.0"
     "@mantine/core": "npm:7.16.0"
     "@mantine/hooks": "npm:7.16.0"
     "@storybook/react": "npm:^8.4.5"
@@ -5103,6 +5135,7 @@ __metadata:
     "@types/react-dom": "npm:^18.3.1"
     "@vitejs/plugin-react": "npm:^4.3.4"
     axios: "npm:^1.7.9"
+    embla-carousel-react: "npm:7.1.0"
     eslint: "npm:^9.15.0"
     eslint-config-mantine: "npm:^4.0.3"
     eslint-plugin-jsx-a11y: "npm:^6.10.2"

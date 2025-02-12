@@ -79,7 +79,7 @@ export const Streaks : FC<StyleProps> = ({main, sec, isFull}) => {
         <>
             <SectionHeader 
               name="Streaks"
-              desc="Attempts Since Failing for Some Daily Challenges"
+              desc="Attempts Since Failing For Some Daily Challenges"
               col={sec}
             />
             {isFull ? (

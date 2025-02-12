@@ -3,7 +3,7 @@ import { useDisclosure } from '@mantine/hooks'
 import { SectionHeader } from '../SectionHeader/SectionHeader'
 import StyleProps from "@/types/StyleProps"
 import { FC } from 'react'
-import { theme } from '../../../src/theme'
+import { themeL } from '../../themeL'
 import classes from './Sections.module.css'
 
 interface DropdownProps {
@@ -24,7 +24,7 @@ const pointToDesc = {
 
     "Actuarial Science" : `Math has always been something I enjoyed, so any career path that
     relied upon passing math exams was fine by me. I have grown and learned a lot through
-    my internships in this field, particular how to share technical expertise within a business context`,
+    my internships in this field, but still have not become familiar with all aspects of the profession`,
 
     "Running" : `I train to become a better runner pretty much every day. At this point it is more
     of a lifestyle than a hobby, but I enjoy it (sometimes)`,
@@ -59,7 +59,7 @@ export const About : FC<StyleProps> = ({main, sec}) => {
                         return (
                                 <Accordion.Item key={i} value={i.toString()}>
                                     <Accordion.Control 
-                                      className={main===theme.colors!.lightBlue![4] ? classes.lightBlueHover : ""}
+                                      className={main===themeL.colors!.lightBlue![4] ? classes.lightBlueHover : ""}
                                       style={{color : sec}}
                                       icon={bullet.icon}
                                       mx="5px">
@@ -79,7 +79,7 @@ export const About : FC<StyleProps> = ({main, sec}) => {
         <>
             <SectionHeader
                 name="About"
-                desc="A Brief Overview of Who I Am"
+                desc="A Brief Overview Of Who I Am"
                 col={sec}
             />
             <Image

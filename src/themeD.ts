@@ -1,6 +1,6 @@
 import { createTheme, rem } from '@mantine/core';
 
-export const theme = createTheme({
+export const themeD = createTheme({
   colors: {
     lightBlue: [
       "#e1fbff",
@@ -57,7 +57,7 @@ export const theme = createTheme({
 
   primaryShade: { light: 4, dark: 6},
 
-  white: 'lightBlue',
+  white : '#000000',
   autoContrast: true,
 
   fontFamily: `Patrick Hand`,

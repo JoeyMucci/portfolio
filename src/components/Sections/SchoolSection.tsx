@@ -40,7 +40,8 @@ export const School : FC<StyleProps> = ({main, sec}) => {
               style={{opacity : .5}} 
               td="underline" 
               component="span" 
-              onClick={() => {setCardIndex(destination)}}>
+              onClick={() => {setCardIndex(destination)}}
+            >
                 {text}
             </Text>
         )  
@@ -210,7 +211,7 @@ export const School : FC<StyleProps> = ({main, sec}) => {
         <>
             <SectionHeader 
               name="School"
-              desc="Where I Learn and Engage with a Community"
+              desc="Where I Learn And Engage With A Community"
               col={sec}
             />
 
