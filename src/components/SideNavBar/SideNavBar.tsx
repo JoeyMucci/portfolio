@@ -28,33 +28,53 @@ const navButtons = [
 
 interface ToggleProps {
     toggle : () => void
+    switcher : (a : number) => void
+    curSect : number
 }
 
-export const SideNavBar : FC<ToggleProps> = ({toggle}) => {
+export const SideNavBar : FC<ToggleProps> = ({toggle, switcher, curSect}) => {
     const { colorScheme, setColorScheme } = useMantineColorScheme();
 
     return (
         <nav className={classes.navbar} style={{backgroundColor : colorScheme === 'light' ? themeL.colors!.pink![4] : themeL.colors!.orange![6]}}>
             <Stack justify="center" gap={0}>
-                {navButtons.map((nButt, i) => 
-                    <Tooltip 
-                      key={i}
-                      label={nButt.label}  
-                      color={colorScheme === 'light' ? themeL.colors!.pink![4] : themeL.colors!.orange![6]} 
-                      style={colorScheme === 'dark' ? {color: themeL.colors!.dark![7] } : {}}
-                      position="right" 
-                      transitionProps={{ duration : 0 }}
-                      offset={20}
-                    >
-                        <UnstyledButton className={classes.element}>
-                            <nButt.Icon 
-                            size={35} 
-                            stroke={1.5}
-                            color={colorScheme === 'light' ? themeL.colors!.lightBlue![4] : themeL.colors!.dark![7]}
-                            />
-                        </UnstyledButton>
-                    </Tooltip>
-                )}
+                {navButtons.map((nButt, i) => {
+                    return (
+                        <Tooltip 
+                          key={i}
+                          label={i === curSect ? "Show All" : nButt.label}  
+                          color={colorScheme === 'light' ? themeL.colors!.pink![4] : themeL.colors!.orange![6]} 
+                          style={colorScheme === 'dark' ? {color: themeL.colors!.dark![7] } : {}}
+                          position="right" 
+                          transitionProps={{ duration : 0 }}
+                          offset={20}
+                        >
+                            {i === curSect ? (
+                                <UnstyledButton 
+                                  style={colorScheme === 'light' ? 
+                                    {backgroundColor : themeL.colors!.lightBlue![4]} :
+                                    {backgroundColor : themeL.colors!.dark![7]}
+                                }
+                                  className={classes.element} onClick={() => switcher(i)}
+                                >
+                                    <nButt.Icon 
+                                      size={35} 
+                                      stroke={1.5}
+                                      color={colorScheme === 'light' ? themeL.colors!.pink![4] : themeL.colors!.orange![6]}
+                                    />
+                                </UnstyledButton>
+                            ) : (
+                                <UnstyledButton className={classes.element} onClick={() => switcher(i)}>
+                                    <nButt.Icon 
+                                      size={35} 
+                                      stroke={1.5}
+                                      color={colorScheme === 'light' ? themeL.colors!.lightBlue![4] : themeL.colors!.dark![7]}
+                                    />
+                                </UnstyledButton>
+                            )}
+                        </Tooltip>
+                    )
+                })}
             </Stack>
             
             {colorScheme === 'light' ? (

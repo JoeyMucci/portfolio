@@ -10,7 +10,7 @@ import { Press } from '@/components/Sections/PressSection'
 import { Stack, MantineColor, useMantineColorScheme } from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
 import { themeL } from '../themeL'
-import { FC } from 'react'
+import { useState, useEffect, FC } from 'react'
 
 const lightMain : MantineColor = themeL.colors!.lightBlue![4]
 const lightSec : MantineColor = themeL.colors!.pink![4]
@@ -33,24 +33,46 @@ interface ToggleProps {
 }
 
 export const HomePage : FC<ToggleProps> = ({toggle}) => {
+  const [sectionView, setSectionView] = useState<number>(-1)
   const { colorScheme } = useMantineColorScheme();
   const largeScreen = useMediaQuery('(min-width: 56em)');
+
+  // Show all sections if click on section already selected
+  // Otherwise, just show the next section
+  const switchView = (newView : number) => {
+    if(newView === sectionView) {
+      setSectionView(-1)
+    }
+    else {
+      setSectionView(newView);
+    }
+  }
+
+  // Show all the sections in mobile mode
+  useEffect(() => {
+    if(!largeScreen) {
+      setSectionView(-1)
+    }
+  }, [largeScreen])
 
   return (
     <>
       {largeScreen && 
-        <SideNavBar toggle={toggle} />  
+        <SideNavBar toggle={toggle} switcher={switchView} curSect={sectionView}/>  
       }
       <Stack align="center">
         {Sections.map((Section, i) => {
-          return (
-            <Section
-              key={i}
-              main={colorScheme === 'light' ? lightMain : darkMain}
-              sec={colorScheme === 'light' ? lightSec : darkSec}
-              isFull={largeScreen as boolean}
-            />
-          )
+          if(sectionView === -1 || sectionView === i) {
+            return (
+              <Section
+                key={i}
+                main={colorScheme === 'light' ? lightMain : darkMain}
+                sec={colorScheme === 'light' ? lightSec : darkSec}
+                isFull={largeScreen as boolean}
+              />
+            )
+          }
+          return <></>
         })}
       </Stack>
     </>
