@@ -38,7 +38,9 @@ export const HomePage : FC<ToggleProps> = ({toggle}) => {
 
   return (
     <>
-      <SideNavBar toggle={toggle} />     
+      {largeScreen && 
+        <SideNavBar toggle={toggle} />  
+      }
       <Stack align="center">
         {Sections.map((Section, i) => {
           return (
