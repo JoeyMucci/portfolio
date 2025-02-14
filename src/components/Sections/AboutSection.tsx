@@ -84,7 +84,7 @@ export const About : FC<StyleProps> = ({main, sec}) => {
                 col={sec}
             />
             <Image
-                radius="md"
+                radius="lg"
                 w={300}
                 src={headshot}
                 style={{borderColor: sec, borderWidth: "5px", borderStyle: "solid"}}

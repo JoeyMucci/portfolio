@@ -71,7 +71,7 @@ export const Experience : FC<StyleProps> = ({main, sec, isFull}) => {
                 style={{color : sec}} 
                 radius="lg" 
                 onClick={() => openModal(learnPoints, `${shortEmp}: Lessons Learned`)}
-                className={main===themeL.colors!.lightBlue![4] ? "" : classes.lightBlackHover}
+                className={main === themeL.colors!.lightBlue![4] ? "" : classes.lightBlackHover}
             >
                 View Lessons Learned
             </Button>
@@ -83,7 +83,7 @@ export const Experience : FC<StyleProps> = ({main, sec, isFull}) => {
               style={{color : sec}} 
               radius="lg" 
               onClick={() => openModal(doPoints, `${shortEmp}: Contributions`)}
-              className={main===themeL.colors!.lightBlue![4] ? "" : classes.lightBlackHover}
+              className={main === themeL.colors!.lightBlue![4] ? "" : classes.lightBlackHover}
             >
                 View Contributions
             </Button>
@@ -130,6 +130,7 @@ export const Experience : FC<StyleProps> = ({main, sec, isFull}) => {
               opened={opened} 
               onClose={close} 
               title={title}
+              classNames={main === themeL.colors!.lightBlue![4] ? {close : classes.lightBlueHover} : {}}
             >
                 <List w={325}>
                     {bulletPoints?.map((bp, i) => (

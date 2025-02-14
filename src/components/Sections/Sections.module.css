@@ -47,3 +47,7 @@
     transition: opacity 150ms ease;
     opacity: 0;
 }
+
+.mantine-Modal-close:hover {
+    background-color: var(--mantine-color-lightBlue-2);
+}
