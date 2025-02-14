@@ -45,7 +45,7 @@ const cardInfo : CardProps[] = [
             "Growth comes from being proactive and taking on new challenges",
         ],
         doPoints: [
-            `Developed a PowerShell script to automate copy-pasting between 
+            `Created a PowerShell script to automate copy-pasting between 
             Excel workbooks, saving my team about 30 minutes of manual work per month`,
             `Analyzed Big Data in SAS to conduct risk score studies and
             update monthly reports`
@@ -118,7 +118,7 @@ export const Experience : FC<StyleProps> = ({main, sec, isFull}) => {
         <>
             <SectionHeader 
               name="Experience"
-              desc="Companies That Are Part Of My Development"
+              desc="Companies That I Have Developed At"
               col={sec}
             />
 
