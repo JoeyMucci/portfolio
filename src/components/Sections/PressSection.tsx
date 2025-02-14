@@ -65,7 +65,7 @@ export const Press : FC<StyleProps> = ({main, sec, isFull}) => {
         <>
             <SectionHeader 
               name="Press"
-              desc="Published Articles Either Authored By Or Pertaining To Me"
+              desc="Published Articles Authored By Or Pertaining To Me"
               col={sec}
             />
 

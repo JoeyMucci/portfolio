@@ -13,7 +13,7 @@ export const SectionHeader : FC<shProps> = ( {name, desc, col} ) => {
             <Title order={1} style={{color: col}}>
                 <u>{name}</u>
             </Title>
-            <Title order={4} style={{color : col, opacity : 0.5}}>
+            <Title ta="center" order={4} style={{color : col, opacity : 0.5}}>
                 {desc}
             </Title>
         </>

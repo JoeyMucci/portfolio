@@ -118,7 +118,7 @@ export const Experience : FC<StyleProps> = ({main, sec, isFull}) => {
         <>
             <SectionHeader 
               name="Experience"
-              desc="Companies That Have Been A Part Of My Development"
+              desc="Companies That Are Part Of My Development"
               col={sec}
             />
 
