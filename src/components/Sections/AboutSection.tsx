@@ -5,6 +5,7 @@ import StyleProps from "@/types/StyleProps"
 import { FC } from 'react'
 import { themeL } from '../../themeL'
 import classes from './Sections.module.css'
+import headshot from '../../imgs/headshot.png'
 
 interface DropdownProps {
     name : string
@@ -85,7 +86,7 @@ export const About : FC<StyleProps> = ({main, sec}) => {
             <Image
                 radius="md"
                 w={300}
-                src="/src/imgs/headshot.png"
+                src={headshot}
                 style={{borderColor: sec, borderWidth: "5px", borderStyle: "solid"}}
             />
             <Stack w={350}>
