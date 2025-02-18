@@ -24,8 +24,9 @@ const pointToDesc = {
     programming but I am open to trying new things since I am very young in my career`,
 
     "Actuarial Science" : `Math has always been something I enjoyed, so any career path that
-    relied upon passing math exams was fine by me. I have grown and learned a lot through
-    my internships in this field, but still have not become familiar with all aspects of the profession`,
+    relies upon passing math exams (so far I have passed the probability and financial mathematics exams)
+    is fine by me. I have grown and learned a lot through my internships in this field, but still have 
+    not become familiar with all aspects of the profession`,
 
     "Running" : `I train to become a better runner pretty much every day. At this point it is more
     of a lifestyle than a hobby, but I enjoy it (sometimes)`,
