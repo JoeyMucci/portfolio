@@ -10,7 +10,7 @@ import { themeD } from './themeD';
 export default function App() {
   const start = localStorage.getItem('mantine-color-scheme-value') !== null ? 
     localStorage.getItem('mantine-color-scheme-value')! :
-    'light'; 
+    'dark'; 
 
   const [colorScheme, setColorScheme] = useState<string>(start);
 
