@@ -6,7 +6,7 @@ import { HomePage } from './pages/Home.page';
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <HomePage toggle={() => {}}/>,
+    element: <HomePage toggle={() => {}} />,
   },
 ]);
 

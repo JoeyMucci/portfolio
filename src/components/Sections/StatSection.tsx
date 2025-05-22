@@ -1,35 +1,35 @@
-import { Stack, Group } from '@mantine/core'
+import { FC, useState } from 'react';
 import axios from 'axios';
-import { useState, FC } from 'react';
-import StyleProps from "@/types/StyleProps"
-import { SectionHeader } from '../SectionHeader/SectionHeader';
+import { Group, Stack } from '@mantine/core';
+import StyleProps from '@/types/StyleProps';
 import { BigNumber } from '../BigNumber/BigNumber';
- 
-export const Stats : FC<StyleProps> = ({main, sec, isFull}) => {
-  const chessPath : string = `https://api.chess.com/pub/player/joeypat11/stats`
-  const leetPath : string = `${import.meta.env.VITE_PROXY_URL}/https://leetcode.com/graphql?query=query%20%7B%20userContestRanking
-  (username%3A%20%22jmucc314%22)%20%7B%20rating%20%7D%20%7D`
+import { SectionHeader } from '../SectionHeader/SectionHeader';
 
-  const [chessRating, setChessRating] = useState<number | string>("Loading..." )
-  const [leetcodeRating, setLeetcodeRating] = useState<number | string>("Loading...")
+export const Stats: FC<StyleProps> = ({ main, sec, isFull }) => {
+  const chessPath: string = `https://api.chess.com/pub/player/joeypat11/stats`;
+  const leetPath: string = `${import.meta.env.VITE_PROXY_URL}/https://leetcode.com/graphql?query=query%20%7B%20userContestRanking
+  (username%3A%20%22jmucc314%22)%20%7B%20rating%20%7D%20%7D`;
+
+  const [chessRating, setChessRating] = useState<number | string>('Loading...');
+  const [leetcodeRating, setLeetcodeRating] = useState<number | string>('Loading...');
 
   axios.get(chessPath).then(
     (response) => {
-        setChessRating(response.data.chess_rapid.last.rating)
+      setChessRating(response.data.chess_rapid.last.rating);
     },
     (_) => {
-      setChessRating('Unavailable')
+      setChessRating('Unavailable');
     }
-  )
+  );
 
   axios.get(leetPath).then(
     (response) => {
-      setLeetcodeRating(Math.round(response.data.data.userContestRanking.rating))
+      setLeetcodeRating(Math.round(response.data.data.userContestRanking.rating));
     },
     (_) => {
-      setLeetcodeRating('Unavailable')
+      setLeetcodeRating('Unavailable');
     }
-  )
+  );
 
   const Chess = () => {
     return (
@@ -40,20 +40,20 @@ export const Stats : FC<StyleProps> = ({main, sec, isFull}) => {
         main={main}
         sec={sec}
       />
-    )
-  }
+    );
+  };
 
   const Leetcode = () => {
     return (
-      <BigNumber 
+      <BigNumber
         description="Live Leetcode Contest Rating"
         value={leetcodeRating as string}
         url="https://leetcode.com/u/jmucc314/"
         main={main}
         sec={sec}
       />
-    )
-  }
+    );
+  };
 
   const HalfMile = () => {
     return (
@@ -64,8 +64,8 @@ export const Stats : FC<StyleProps> = ({main, sec, isFull}) => {
         main={main}
         sec={sec}
       />
-    )
-  }
+    );
+  };
 
   const Mile = () => {
     return (
@@ -76,9 +76,9 @@ export const Stats : FC<StyleProps> = ({main, sec, isFull}) => {
         main={main}
         sec={sec}
       />
-    )
-  }
-    
+    );
+  };
+
   return (
     <>
       <SectionHeader
@@ -87,16 +87,16 @@ export const Stats : FC<StyleProps> = ({main, sec, isFull}) => {
         col={sec}
       />
       {isFull ? (
-          <Group>
-            <Stack align="center" gap="lg">
-              <Chess />
-              <HalfMile />
-            </Stack>
-            <Stack align="center" gap="lg">
-              <Leetcode />
-              <Mile />
-            </Stack>
-          </Group>
+        <Group>
+          <Stack align="center" gap="lg">
+            <Chess />
+            <HalfMile />
+          </Stack>
+          <Stack align="center" gap="lg">
+            <Leetcode />
+            <Mile />
+          </Stack>
+        </Group>
       ) : (
         <Stack>
           <Chess />
@@ -106,5 +106,5 @@ export const Stats : FC<StyleProps> = ({main, sec, isFull}) => {
         </Stack>
       )}
     </>
-  )
-}
+  );
+};
