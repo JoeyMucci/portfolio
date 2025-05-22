@@ -79,10 +79,10 @@ export const School : FC<StyleProps> = ({main, sec}) => {
         return (
             <>
                 <Text ta="center" mx="2" className={classes.unselectable} style={{color : main}}>
-                    I attend the Albert Dorman Honors College at New Jersey Institute of Technology where I{" "}
-                    <Link destination={labels.LEADERSHIP} text="lead" />{", "}
-                    <Link destination={labels.STUDIES} text="study" />{", and "}
-                    <Link destination={labels.GIVING} text="give back" />
+                    I attended the Albert Dorman Honors College at New Jersey Institute of Technology where I{" "}
+                    <Link destination={labels.LEADERSHIP} text="led" />{", "}
+                    <Link destination={labels.STUDIES} text="studied" />{", and "}
+                    <Link destination={labels.GIVING} text="gave back" />
                 </Text>
             </>
         )
@@ -93,7 +93,7 @@ export const School : FC<StyleProps> = ({main, sec}) => {
             <>
                 <BackArrow destination={labels.HOME} title="Leadership" />
                 <Text ta="center" mx="2" className={classes.unselectable} style={{color : main}}>
-                    Some campus activities in which I help teams succeed are{" "}
+                    Some campus activities in which I helped teams succeed are{" "}
                     <Link destination={labels.CROSS} text="Cross Country/Track & Field" />{" and "}
                     <Link destination={labels.FINACT} text="Finance & Actuarial Society" />
                 </Text>
@@ -106,7 +106,7 @@ export const School : FC<StyleProps> = ({main, sec}) => {
             <>
                 <BackArrow destination={labels.HOME} title="Studies" />
                 <Text ta="center" mx="2" className={classes.unselectable} style={{color : main}}>
-                    I am majoring in{" "}
+                    I majored in{" "}
                     <Link destination={labels.MATH} text="Applied Mathematics" />{" and "}
                     <Link destination={labels.CS} text="Computer Science" />{" with a 4.0 GPA"}
                 </Text>
@@ -119,7 +119,7 @@ export const School : FC<StyleProps> = ({main, sec}) => {
             <>
                 <BackArrow destination={labels.HOME} title="Giving Back" />
                 <Text ta="center" mx="2" className={classes.unselectable} style={{color : main}}>
-                    Some roles I play in NJIT/Newark are{" "}
+                    Some roles I played in NJIT/Newark were{" "}
                     <Link destination={labels.TA} text="Teacher Assistant" />{", "}
                     <Link destination={labels.VOLUNTEER} text="Volunteer" />{", and "}
                     <Link destination={labels.OL} text="Orientation Leader" />
@@ -144,7 +144,7 @@ export const School : FC<StyleProps> = ({main, sec}) => {
             <>
                 <BackArrow destination={labels.LEADERSHIP} title="Actuarial Club President" />
                 <Text ta="center" mx="2" className={classes.unselectable} style={{color : main}}>
-                    As president, I organize club meetings and work with the rest of the executive board on budgeting and publicity
+                    As president, I organized club meetings and worked with the rest of the executive board on budgeting and publicity
                 </Text>
             </>
         )
@@ -155,7 +155,7 @@ export const School : FC<StyleProps> = ({main, sec}) => {
             <>
                 <BackArrow destination={labels.STUDIES} title="Math Major" />
                 <Text ta="center" mx="2" className={classes.unselectable} style={{color : main}}>
-                    Some of the most engaging courses I've taken are differential equations, analysis, and linear algebra
+                    Some of the most engaging courses I've taken were differential equations, analysis, and linear algebra
                 </Text>
             </>
         )
@@ -188,7 +188,7 @@ export const School : FC<StyleProps> = ({main, sec}) => {
             <>
                 <BackArrow destination={labels.GIVING} title="Volunteering" />
                 <Text ta="center" mx="2" className={classes.unselectable} style={{color : main}}>
-                    My most impactful and rewarding service opportunity have been teaching scratch coding at a local middle school
+                    My most impactful and rewarding service opportunity has been teaching scratch coding at a local middle school
                 </Text>
             </>
         )
