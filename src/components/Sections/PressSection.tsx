@@ -13,15 +13,15 @@ interface ArticleProps {
 
 const articleInfo : ArticleProps[] = [
     {
+        title : "America East Announces Man & Woman of the Year Nominees",
+        url : "https://americaeast.com/news/2025/5/19/2025_MOTY_WOTY_nominees.aspx",
+        date : new Date("5/19/25")
+    },
+    {
         title : "Mucci Named to America East All-Academic Team",
         url : "https://njithighlanders.com/news/2024/11/26/mens-cross-country-mucci-named-to-america-east-all-academic-team.aspx",
         date : new Date("11/26/24")
     },
-    // {
-    //     title : "America East Indoors Ends With Major Women's Medal Haul, Men's Major Award",
-    //     url : "https://njithighlanders.com/news/2024/2/20/womens-track-field-america-east-indoors-ends-with-major-womens-medal-haul-mens-major-award.aspx",
-    //     date : new Date("2/20/24")
-    // },
     {
         title : "Gradient Boosting from Scratch in Python with JAX",
         url: "https://medium.com/@jpm73/gradient-boosting-from-scratch-in-python-with-jax-685acfa740",
@@ -71,8 +71,20 @@ export const Press : FC<StyleProps> = ({main, sec, isFull}) => {
 
             {isFull ? (
                 <Stack>
-                    {Array.from({length : articleInfo.length / 2}, (_, i) => i).map((index) => {
+                    {Array.from({length : Math.floor((articleInfo.length + 1)/ 2)}, (_, i) => i).map((index) => {
                         const ci1 : ArticleProps = articleInfo[index * 2];
+
+                        // If there is an odd number of articles, the last one will not have a pair
+                        if (index * 2 + 1 >= articleInfo.length) {
+                            return (
+                                <Group key={index}>
+                                    <Article
+                                        {...ci1}
+                                    />
+                                </Group>
+                            )
+                        }
+
                         const ci2 : ArticleProps = articleInfo[index * 2 + 1]
                         return(
                             <Group key={index}>
