@@ -28,8 +28,8 @@ const cardInfo: CardProps[] = [
     skill: 'Python',
     description: `I programmed in Python extensively to develop the Django backend for my CS senior capstone
         project. I've also done a couple of data science projects in Python (i.e. feature classification of 
-        satellite images). This semester I am using some Python in my math capstone to determine how a structure's
-        topology determines how a liquid flows through it`,
+        satellite images). I also used Python in my math capstone to build a neural network that predicts permeability
+        of simulated structures.`,
     links: [
       {
         label: 'Semantic Segmentation of Satellite Images',
