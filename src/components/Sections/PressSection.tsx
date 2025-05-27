@@ -13,9 +13,9 @@ interface ArticleProps {
 
 const articleInfo: ArticleProps[] = [
   {
-    title: 'America East Announces Man & Woman of the Year Nominees',
-    url: 'https://americaeast.com/news/2025/5/19/2025_MOTY_WOTY_nominees.aspx',
-    date: new Date('5/19/25'),
+    title: 'America East Announces Man and Woman of the Year Finalists',
+    url: 'https://americaeast.com/news/2025/5/27/2025_MOTY_WOTY_Finalists.aspx',
+    date: new Date('5/27/25'),
   },
   {
     title: 'Mucci Named to America East All-Academic Team',
