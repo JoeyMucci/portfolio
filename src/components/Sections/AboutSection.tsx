@@ -35,7 +35,7 @@ const pointToDesc = {
     such as Mafia and Werewolf. For video games I stick to Nintendo mostly`,
 
   Tennis: `I do not actually play tennis, I just enjoy following the professional scene. My
-    favorite players right now are Casper Ruud on the men's tour and Jessica Pegula on the 
+    favorite players right now are Taylor Fritz on the men's tour and Jessica Pegula on the 
     women's tour`,
 
   Birthday: `I was born on pi day (March 14). Perhaps I was destined to become a math enthusiast.
