@@ -18,6 +18,19 @@ interface CardProps {
 
 const cardInfo: CardProps[] = [
   {
+    employer: 'Canonical',
+    shortEmp: 'Canonical',
+    role: 'Software Engineer',
+    time: 'Aug 2025-Present',
+    location: 'Remote',
+    learnPoints: [
+      'To Be Determined!',
+    ],
+    doPoints: [
+      `To Be Determined!`
+    ],
+  },
+  {
     employer: 'The Cigna Group',
     shortEmp: 'Cigna',
     role: 'Actuarial Intern',
@@ -147,18 +160,30 @@ export const Experience: FC<StyleProps> = ({ main, sec, isFull }) => {
 
       {isFull ? (
         <Stack>
-          {Array.from({ length: cardInfo.length / 2 }, (_, i) => i).map((index) => {
-            const ci1: CardProps = cardInfo[index * 2];
-            const ci2: CardProps = cardInfo[index * 2 + 1];
-            return (
-              <Group key={index}>
-                <ExperienceCard {...ci1} />
-
-                <ExperienceCard {...ci2} />
-              </Group>
-            );
-          })}
-        </Stack>
+                  {Array.from({ length: Math.floor((cardInfo.length + 1) / 2) }, (_, i) => i).map(
+                    (index) => {
+                      const ci1: CardProps = cardInfo[index * 2];
+        
+                      // If there is an odd number of ExperienceCards, the last one will not have a pair
+                      if (index * 2 + 1 >= cardInfo.length) {
+                        return (
+                          <Group key={index}>
+                            <ExperienceCard {...ci1} />
+                          </Group>
+                        );
+                      }
+        
+                      const ci2: CardProps = cardInfo[index * 2 + 1];
+                      return (
+                        <Group key={index}>
+                          <ExperienceCard {...ci1} />
+        
+                          <ExperienceCard {...ci2} />
+                        </Group>
+                      );
+                    }
+                  )}
+                </Stack>
       ) : (
         <Stack>
           {cardInfo.map((ci, i) => (
