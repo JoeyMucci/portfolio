@@ -224,7 +224,7 @@ export const School: FC<StyleProps> = ({ main, sec }) => {
 
   return (
     <>
-      <SectionHeader name="School" desc="Where I Learn And Engage With A Community" col={sec} />
+      <SectionHeader name="School" desc="Where I Learned And Engaged With A Community" col={sec} />
 
       <Paper style={{ backgroundColor: sec }} radius="lg">
         <Stack w={350} h={250} justify="center">
