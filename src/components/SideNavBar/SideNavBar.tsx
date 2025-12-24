@@ -22,7 +22,7 @@ const navButtons = [
   { Icon: IconBriefcase2, label: 'Experience' },
   { Icon: IconTargetArrow, label: 'Skills' },
   { Icon: IconGraph, label: 'Stats' },
-  // { Icon: IconFlame, label: 'Streaks' },
+  { Icon: IconFlame, label: 'Streaks' },
   { Icon: IconNews, label: 'Press' },
 ];
 
