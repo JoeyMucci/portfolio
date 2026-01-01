@@ -69,7 +69,7 @@ export const Press: FC<StyleProps> = ({ main, sec, isFull }) => {
       />
 
       {isFull ? (
-        <Stack>
+        <Stack align="center">
           {Array.from({ length: Math.floor((articleInfo.length + 1) / 2) }, (_, i) => i).map(
             (index) => {
               const ci1: ArticleProps = articleInfo[index * 2];

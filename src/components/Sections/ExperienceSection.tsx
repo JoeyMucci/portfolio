@@ -24,10 +24,12 @@ const cardInfo: CardProps[] = [
     time: 'Aug 2025-Present',
     location: 'Remote',
     learnPoints: [
-      'To Be Determined!',
+      'Agile teams often have to readjust priorities according to customer needs',
+      'Valuable software products are built to last, and require effort to maintain as they mature',
     ],
     doPoints: [
-      `To Be Determined!`
+      `Carried out testing and fixed a bug ahead of the release of Ubuntu Pro for WSL`,
+      `Added an option for client machines to dump their configuration options before connecting to a server`,
     ],
   },
   {
@@ -159,7 +161,7 @@ export const Experience: FC<StyleProps> = ({ main, sec, isFull }) => {
       </Modal>
 
       {isFull ? (
-        <Stack>
+        <Stack align="center">
                   {Array.from({ length: Math.floor((cardInfo.length + 1) / 2) }, (_, i) => i).map(
                     (index) => {
                       const ci1: CardProps = cardInfo[index * 2];
