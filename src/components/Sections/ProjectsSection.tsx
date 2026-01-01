@@ -20,6 +20,17 @@ interface CardProps {
 
 const cardInfo: CardProps[] = [
   {
+    name: 'Mega Auto Pebble League',
+    description: 'A perpetual dice rolling tournament ecosystem for stuffed animals and figures',
+    link: 'https://pebble-kingdom.com',
+    type: 'Solo',
+    code: 'https://github.com/JoeyMucci/MAPL-backend',
+    featsOne: ['Bout Scheduling', 'Claude News Reporting'],
+    featsTwo: ['Head 2 Head View', 'Promotion & Demotion', 'Help Pages'],
+    techs: ['NextJS', 'Typescript', 'Django REST', 'Mantine'],
+    left: true,
+  },
+  {
     name: 'Red-Black Tree Lesson',
     description: 'A sandbox to learn and practice the red-black tree data structure',
     link: 'https://redblacktreelesson.netlify.app',
@@ -28,9 +39,8 @@ const cardInfo: CardProps[] = [
     featsOne: ['Build your own tree', 'Learn the rules'],
     featsTwo: ['Live Explanation', 'Unit Testing', 'CI/CD Pipeline'],
     techs: ['NextJS', 'Typescript', 'Jest', 'Mantine'],
-    left: true,
+    left: false,
   },
-
   {
     name: 'Rosetta Code',
     description: 'A place where you can translate code between programming languages via GPT-3',
@@ -40,7 +50,7 @@ const cardInfo: CardProps[] = [
     featsOne: ['OpenAI API', 'Two Factor Authentication'],
     featsTwo: ['Translation History', 'Unit Testing', '4 Sprint SDLC'],
     techs: ['React', 'GraphQL', 'Prisma', 'Jest', 'Jira'],
-    left: false,
+    left: true,
   },
   {
     name: 'Where to Play',
@@ -51,7 +61,7 @@ const cardInfo: CardProps[] = [
     featsOne: ['Real-time Collaboration', 'Data Access Control'],
     featsTwo: ['Outlier Detection', 'Idea Dashboard', '5 Sprint SDLC'],
     techs: ['NextJS', 'Django Rest', 'MySQL', 'Redis', 'Jira'],
-    left: true,
+    left: false,
   },
   {
     name: 'Sushi Go Clone',
@@ -62,7 +72,7 @@ const cardInfo: CardProps[] = [
     featsOne: ['Computer Difficulty', 'Leaderboard'],
     featsTwo: ['Achievements', 'Scoring Notifications'],
     techs: ['React', 'GraphQL', 'Prisma', 'TailwindCSS'],
-    left: false,
+    left: true,
   },
 ];
 
@@ -104,7 +114,7 @@ export const Projects: FC<StyleProps> = ({ main, sec, isFull }) => {
               <Text style={{ color: main }} size="md" fw={900}>
                 {name}
               </Text>
-              <Badge color={main} style={{ color: sec }}>
+              <Badge color={main} style={{ color: sec }} size="xs">
                 {type}
               </Badge>
             </Group>
@@ -192,9 +202,17 @@ export const Projects: FC<StyleProps> = ({ main, sec, isFull }) => {
     <>
       <SectionHeader name="Projects" desc="Cool Things That I Have Built" col={sec} />
       {isFull ? (
-        <Stack>
-          {Array.from({ length: cardInfo.length / 2 }, (_, i) => i).map((index) => {
+        <Stack align="center">
+          {Array.from({ length: Math.floor((cardInfo.length + 1) / 2) }, (_, i) => i).map((index) => {
             const ci1: CardProps = cardInfo[index * 2];
+            if(index * 2 + 1 >= cardInfo.length) {
+              return (
+                <Group key={index}>
+                  <ProjectCard {...ci1} />
+                </Group>
+              )
+            }
+
             const ci2: CardProps = cardInfo[index * 2 + 1];
             return (
               <Group key={index}>
