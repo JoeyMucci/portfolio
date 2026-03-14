@@ -26,10 +26,14 @@ const cardInfo: CardProps[] = [
     learnPoints: [
       'Agile teams often have to readjust priorities according to customer needs',
       'Valuable software products are built to last, and require effort to maintain as they mature',
+      'Sometimes you need to make yourself uncomfortable to learn something new and grow',
+      'When deadlines are tight, it is better to be proactive and discuss solutions than to try and power through',
     ],
     doPoints: [
-      `Carried out testing and fixed a bug ahead of the release of Ubuntu Pro for WSL`,
+      `Carried out testing and fixed a bug ahead of our SaaS release supporting Ubuntu Pro for WSL`,
       `Added an option for client machines to dump their configuration options before connecting to a server`,
+      `Created a CI pipeline that runs all of our tests before automatically deploying our software for beta releases`,
+      `Owned the process of releasing landscape-client into the Ubuntu archive for LTS 26.04 Resolute Raccoon`
     ],
   },
   {
