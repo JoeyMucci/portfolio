@@ -122,7 +122,9 @@ export const Skills: FC<StyleProps> = ({ main, sec, isFull }) => {
         {skill}
       </Text>
 
-      {links?.map((link, i) => <Link key={i} {...link} />)}
+      {links?.map((link, i) => (
+        <Link key={i} {...link} />
+      ))}
 
       <Text h={300} ta="center" style={{ color: main, alignContent: 'center' }} size="sm">
         {description}

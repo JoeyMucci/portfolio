@@ -203,25 +203,27 @@ export const Projects: FC<StyleProps> = ({ main, sec, isFull }) => {
       <SectionHeader name="Projects" desc="Cool Things That I Have Built" col={sec} />
       {isFull ? (
         <Stack align="center">
-          {Array.from({ length: Math.floor((cardInfo.length + 1) / 2) }, (_, i) => i).map((index) => {
-            const ci1: CardProps = cardInfo[index * 2];
-            if(index * 2 + 1 >= cardInfo.length) {
+          {Array.from({ length: Math.floor((cardInfo.length + 1) / 2) }, (_, i) => i).map(
+            (index) => {
+              const ci1: CardProps = cardInfo[index * 2];
+              if (index * 2 + 1 >= cardInfo.length) {
+                return (
+                  <Group key={index}>
+                    <ProjectCard {...ci1} />
+                  </Group>
+                );
+              }
+
+              const ci2: CardProps = cardInfo[index * 2 + 1];
               return (
                 <Group key={index}>
                   <ProjectCard {...ci1} />
+
+                  <ProjectCard {...ci2} />
                 </Group>
-              )
+              );
             }
-
-            const ci2: CardProps = cardInfo[index * 2 + 1];
-            return (
-              <Group key={index}>
-                <ProjectCard {...ci1} />
-
-                <ProjectCard {...ci2} />
-              </Group>
-            );
-          })}
+          )}
         </Stack>
       ) : (
         <Stack>

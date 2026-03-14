@@ -15,7 +15,7 @@ const articleInfo: ArticleProps[] = [
   {
     title: 'Finding the Expected Number of Turns to Finish a Memory Game with Go',
     url: 'https://medium.com/@jmucci314/finding-the-expected-number-of-turns-to-finish-a-memory-game-with-go-f8d45576d35d',
-    date: new Date('3/14/26')
+    date: new Date('3/14/26'),
   },
   {
     title: 'America East Announces Man and Woman of the Year Finalists',
