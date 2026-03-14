@@ -19,23 +19,50 @@ interface CardProps {
 
 const cardInfo: CardProps[] = [
   {
-    skill: 'C/C++/C#',
-    description: `I have used the C languages throughout a variety of my classes at NJIT. Some of the
-        most memorable exercises were making a grammar parser/lexer and creating a tetris program. I am currently 
-        keeping my C skills sharp by doing all my leetcode submissions in C++`,
-  },
-  {
     skill: 'Python',
-    description: `I programmed in Python extensively to develop the Django backend for my CS senior capstone
-        project. I've also done a couple of data science projects in Python (i.e. feature classification of 
-        satellite images). I also used Python in my math capstone to build a neural network that predicts permeability
-        of simulated structures.`,
+    description: `I primarily program in Python at my current job, where we are maintaining and modernizing the server
+        and client applications for a systems administration software. In school, I used Django for my CS senior capstone,
+        and also used tensorflow for my math senior capstone, where my group and I predicted the permeasbility of simulated
+        structures with neural networks`,
     links: [
       {
         label: 'Semantic Segmentation of Satellite Images',
         url: 'https://github.com/JoeyMucci/SemanticSegmentationSatelliteImagery/tree/main',
       },
     ],
+  },
+  {
+    skill: 'REST API',
+    description: `The server application I work in at my job exposes a REST API, and I have learned how to
+        develop a scalable application by keeping the API thin. We've also been making strides to have a more 
+        uniform interface by using a consistent data validation system. I've worked with the Django REST framework
+        for my personal projects. Chess.com has a public REST API which I call to display my current ranking on this website`,
+  },
+  {
+    skill: 'SQL',
+    description: `My SQL skills have levelled up since starting at my new job. I've had to adapt and figure out how
+        to write complicated queries for our expansive database. At the same time, I've also become more adept
+        at tracing logs and debugging performance issues. I've also used SQL in my education and in my actuarial
+        internships, which required dealing with lots of data`,
+  },
+  {
+    skill: 'Golang',
+    description: `I am dabbling here. I continue to dedicate time to learning Go and hope to put it into practice for
+        a side porject in the near future. I definitely like Go, it requires rigor but is also very flexible. Another
+        thing I really like is the built in support for concurrency, and I think it's a great choice for building scalabale systems`,
+  },
+  {
+    skill: 'C/C++/C#',
+    description: `I have used the C languages throughout a variety of my classes at NJIT. Some of the
+        most memorable exercises were making a grammar parser/lexer and creating a tetris program. Back when I
+        was grinding leetcode all my submissions were in C++`,
+  },
+  {
+    skill: 'Shell Scripting',
+    description: `I learned shell scripting in my linux programming course and have found some uses for it
+        since then. It's become quite useful working at Canonical, publisher of Ubuntu, where I run all my day to
+        day tasks through the terminal. I use shell scripting to automate problems at work, and I even wrote a script
+        to update the streaks information for this website`,
   },
   {
     skill: 'JavaScript/TypeScript',
@@ -49,30 +76,6 @@ const cardInfo: CardProps[] = [
     description: `I do not think I have ever done frontend development without React. It is pretty useful
         for making an interactive user interface. As I did more webdev, I've started to use more frontend frameworks
         on top of React (NextJS, UI libraries, etc.)`,
-  },
-  {
-    skill: 'REST API',
-    description: `In building a backend with the Django REST framework, I got to see how to both use and
-        create a REST API. I appreciate its simplicity and the ability to reach the backend via HTTP with GET,
-        POST, etc. Chess.com has a public REST API which I call to display my current ranking on this website`,
-  },
-  {
-    skill: 'GraphQL',
-    description: `GraphQL is a component of the RedwoodJS full-stack framework that I have used for a couple of
-        my projects. It was useful in facilitating communication between frontend and backend. I actually used a GraphQL query
-        in the development of this website (live leetcode contest ranking)`,
-  },
-  {
-    skill: 'SQL',
-    description: `I have worked with SQL in some of my classes and most of my web projects. Also, I used SQL
-        extensively throughout my actuarial internships, which required pulling from from large datasets according to
-        specific criteria to draw conclusions`,
-  },
-  {
-    skill: 'Shell Scripting',
-    description: `I learned shell scripting in my linux programming course and have found some uses for it
-        since then. I applied the principles I learned to solve an automation problem during an internship, and even
-        made wrote a script to update the streaks information for this website`,
   },
   {
     skill: 'Spreadsheets',
@@ -119,7 +122,9 @@ export const Skills: FC<StyleProps> = ({ main, sec, isFull }) => {
         {skill}
       </Text>
 
-      {links?.map((link, i) => <Link key={i} {...link} />)}
+      {links?.map((link, i) => (
+        <Link key={i} {...link} />
+      ))}
 
       <Text h={300} ta="center" style={{ color: main, alignContent: 'center' }} size="sm">
         {description}

@@ -20,7 +20,6 @@ const darkSec: MantineColor = themeL.colors!.orange![6];
 const Sections = [About, School, Projects, Experience, Skills, Stats, Streaks, Press];
 // const Sections = [About, School, Projects, Experience, Skills, Stats, Press];
 
-
 interface ToggleProps {
   toggle: () => void;
 }
