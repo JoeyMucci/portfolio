@@ -20,6 +20,17 @@ interface CardProps {
 
 const cardInfo: CardProps[] = [
   {
+    name: 'Game Library',
+    description: 'A collection of five fun games, one of which I published on the Canonical snap store',
+    link: 'https://snapcraft.io/wandering-warthogs',
+    type: 'Solo',
+    code: 'https://github.com/JoeyMucci/GameLibrary',
+    featsOne: ['Captain Toad Tower Climb', 'Wandering Warthogs'],
+    featsTwo: ['Rainbow Rush', 'The Fox in the Forest', 'UNO'],
+    techs: ['Java', 'Processing', 'Snapcraft', 'Piskel'],
+    left: true,
+  },
+  {
     name: 'Mega Auto Pebble League',
     description: 'A perpetual dice rolling tournament ecosystem for stuffed animals and figures',
     link: 'https://pebble-kingdom.com',
