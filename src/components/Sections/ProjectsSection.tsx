@@ -20,6 +20,17 @@ interface CardProps {
 
 const cardInfo: CardProps[] = [
   {
+    name: 'WC Prediction Platform',
+    description: 'A competition where users submit their World Cup predictions and score points',
+    link: 'https://wcwcpp.com',
+    type: 'Solo',
+    code: 'https://github.com/JoeyMucci/wcwcpp-backend',
+    featsOne: ['Rankings', 'Subcontests', 'Superadmin API'],
+    featsTwo: ['Prediction Scoring', 'Submission Locking'],
+    techs: ['Golang', 'ConnectRPC', 'Typescript', 'Mantine'],
+    left: true,
+  },
+  {
     name: 'Game Library',
     description: 'A collection of five fun games, one of which I published on the Canonical snap store',
     link: 'https://snapcraft.io/wandering-warthogs',
@@ -28,7 +39,7 @@ const cardInfo: CardProps[] = [
     featsOne: ['Captain Toad Tower Climb', 'Wandering Warthogs'],
     featsTwo: ['Rainbow Rush', 'The Fox in the Forest', 'UNO'],
     techs: ['Java', 'Processing', 'Snapcraft', 'Piskel'],
-    left: true,
+    left: false,
   },
   {
     name: 'Mega Auto Pebble League',
@@ -39,7 +50,7 @@ const cardInfo: CardProps[] = [
     featsOne: ['Bout Scheduling', 'Claude News Reporting'],
     featsTwo: ['Head 2 Head View', 'Promotion & Demotion', 'Help Pages'],
     techs: ['NextJS', 'Typescript', 'Django REST', 'Mantine'],
-    left: false,
+    left: true,
   },
   {
     name: 'Red-Black Tree Lesson',
@@ -50,7 +61,7 @@ const cardInfo: CardProps[] = [
     featsOne: ['Build your own tree', 'Learn the rules'],
     featsTwo: ['Live Explanation', 'Unit Testing', 'CI/CD Pipeline'],
     techs: ['NextJS', 'Typescript', 'Jest', 'Mantine'],
-    left: true,
+    left: false,
   },
   {
     name: 'Rosetta Code',
@@ -61,7 +72,7 @@ const cardInfo: CardProps[] = [
     featsOne: ['OpenAI API', 'Two Factor Authentication'],
     featsTwo: ['Translation History', 'Unit Testing', '4 Sprint SDLC'],
     techs: ['React', 'GraphQL', 'Prisma', 'Jest', 'Jira'],
-    left: false,
+    left: true,
   },
   {
     name: 'Where to Play',
@@ -72,7 +83,7 @@ const cardInfo: CardProps[] = [
     featsOne: ['Real-time Collaboration', 'Data Access Control'],
     featsTwo: ['Outlier Detection', 'Idea Dashboard', '5 Sprint SDLC'],
     techs: ['NextJS', 'Django Rest', 'MySQL', 'Redis', 'Jira'],
-    left: true,
+    left: false,
   },
   {
     name: 'Sushi Go Clone',
@@ -83,7 +94,7 @@ const cardInfo: CardProps[] = [
     featsOne: ['Computer Difficulty', 'Leaderboard'],
     featsTwo: ['Achievements', 'Scoring Notifications'],
     techs: ['React', 'GraphQL', 'Prisma', 'TailwindCSS'],
-    left: false,
+    left: true,
   },
 ];
 
