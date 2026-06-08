@@ -47,8 +47,8 @@ const cardInfo: CardProps[] = [
   },
   {
     skill: 'Golang',
-    description: `I am dabbling here. I continue to dedicate time to learning Go and completed my world cup prediction side project using it
-        for a backend API. I definitely like Go, it requires rigor but is also very flexible. Another
+    description: `I am dabbling here. I continue to dedicate time to learning Go and hope to put it into practice for
+        a side project in the near future. I definitely like Go, it requires rigor but is also very flexible. Another
         thing I really like is the built in support for concurrency, and I think it's a great choice for building scalabale systems`,
   },
   {
