@@ -16,6 +16,7 @@ interface CardProps {
   featsTwo: string[];
   techs: string[];
   left: boolean;
+  comissioned: boolean;
 }
 
 const cardInfo: CardProps[] = [
@@ -29,6 +30,7 @@ const cardInfo: CardProps[] = [
     featsTwo: ['Prediction Scoring', 'Submission Locking'],
     techs: ['Golang', 'ConnectRPC', 'Typescript', 'Mantine'],
     left: true,
+    comissioned: true,
   },
   {
     name: 'Game Library',
@@ -40,6 +42,7 @@ const cardInfo: CardProps[] = [
     featsTwo: ['Rainbow Rush', 'The Fox in the Forest', 'UNO'],
     techs: ['Java', 'Processing', 'Snapcraft', 'Piskel'],
     left: false,
+    comissioned: true,
   },
   {
     name: 'Mega Auto Pebble League',
@@ -51,6 +54,7 @@ const cardInfo: CardProps[] = [
     featsTwo: ['Head 2 Head View', 'Promotion & Demotion', 'Help Pages'],
     techs: ['NextJS', 'Typescript', 'Django REST', 'Mantine'],
     left: true,
+    comissioned: true,
   },
   {
     name: 'Red-Black Tree Lesson',
@@ -62,6 +66,7 @@ const cardInfo: CardProps[] = [
     featsTwo: ['Live Explanation', 'Unit Testing', 'CI/CD Pipeline'],
     techs: ['NextJS', 'Typescript', 'Jest', 'Mantine'],
     left: false,
+    comissioned: true,
   },
   {
     name: 'Rosetta Code',
@@ -73,6 +78,7 @@ const cardInfo: CardProps[] = [
     featsTwo: ['Translation History', 'Unit Testing', '4 Sprint SDLC'],
     techs: ['React', 'GraphQL', 'Prisma', 'Jest', 'Jira'],
     left: true,
+    comissioned: false,
   },
   {
     name: 'Where to Play',
@@ -84,6 +90,7 @@ const cardInfo: CardProps[] = [
     featsTwo: ['Outlier Detection', 'Idea Dashboard', '5 Sprint SDLC'],
     techs: ['NextJS', 'Django Rest', 'MySQL', 'Redis', 'Jira'],
     left: false,
+    comissioned: true,
   },
   {
     name: 'Sushi Go Clone',
@@ -95,6 +102,7 @@ const cardInfo: CardProps[] = [
     featsTwo: ['Achievements', 'Scoring Notifications'],
     techs: ['React', 'GraphQL', 'Prisma', 'TailwindCSS'],
     left: true,
+    comissioned: false,
   },
 ];
 
@@ -109,6 +117,7 @@ export const Projects: FC<StyleProps> = ({ main, sec, isFull }) => {
     featsTwo,
     techs,
     left,
+    comissioned,
   }) => {
     const highlightsOne = featsOne.map((feat, i) => (
       <Badge color={main} style={{ color: sec }} key={i}>
@@ -172,12 +181,13 @@ export const Projects: FC<StyleProps> = ({ main, sec, isFull }) => {
               {left || (
                 <Button
                   color={main}
-                  style={{ color: sec, flex: 1 }}
+                  style={{ color: sec, flex: 1, ...!comissioned && { background: main}}}
                   radius="lg"
                   onClick={() => window.open(link, '_blank')}
+                  disabled={!comissioned}
                   className={main === themeL.colors!.lightBlue![4] ? '' : classes.lightBlackHover}
                 >
-                  Check it out
+                  {comissioned ? "Check it out" : "Decomissioned 🫡"}
                 </Button>
               )}
 
@@ -205,12 +215,13 @@ export const Projects: FC<StyleProps> = ({ main, sec, isFull }) => {
               {left && (
                 <Button
                   color={main}
-                  style={{ color: sec, flex: 1 }}
+                  style={{ color: sec, flex: 1, ...!comissioned && { background: main}}}
                   radius="lg"
                   onClick={() => window.open(link, '_blank')}
+                  disabled={!comissioned}
                   className={main === themeL.colors!.lightBlue![4] ? '' : classes.lightBlackHover}
                 >
-                  Check it out
+                  {comissioned ? "Check it out" : "Decomissioned 🫡"}
                 </Button>
               )}
             </Group>
