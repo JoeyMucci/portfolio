@@ -21,7 +21,7 @@ const navButtons = [
   { Icon: IconBlocks, label: 'Projects' },
   { Icon: IconBriefcase2, label: 'Experience' },
   { Icon: IconTargetArrow, label: 'Skills' },
-  { Icon: IconGraph, label: 'Stats' },
+  // { Icon: IconGraph, label: 'Stats' },
   // { Icon: IconFlame, label: 'Streaks' },
   { Icon: IconNews, label: 'Press' },
 ];

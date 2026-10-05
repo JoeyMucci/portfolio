@@ -1,5 +1,5 @@
 import { FC, useEffect, useState } from 'react';
-import { MantineColor, Stack, useMantineColorScheme } from '@mantine/core';
+import { MantineColor, Space, Stack, useMantineColorScheme } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { About } from '@/components/Sections/AboutSection';
 import { Experience } from '@/components/Sections/ExperienceSection';
@@ -18,7 +18,7 @@ const darkMain: MantineColor = themeL.colors!.dark![7];
 const darkSec: MantineColor = themeL.colors!.orange![6];
 
 // const Sections = [About, School, Projects, Experience, Skills, Stats, Streaks, Press];
-const Sections = [About, School, Projects, Experience, Skills, Stats, Press];
+const Sections = [About, School, Projects, Experience, Skills, Press];
 
 interface ToggleProps {
   toggle: () => void;
@@ -64,6 +64,7 @@ export const HomePage: FC<ToggleProps> = ({ toggle }) => {
           return <></>;
         })}
       </Stack>
+      <Space h="md" />
     </>
   );
 };
