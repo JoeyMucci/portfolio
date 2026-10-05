@@ -21,7 +21,7 @@ interface CardProps {
 
 const cardInfo: CardProps[] = [
   {
-    name: 'WC Prediction Platform',
+    name: 'WCWC Prediction Platform',
     description: 'A competition where users submit their World Cup predictions and score points',
     link: 'https://wcwcpp.com',
     type: 'Solo',
@@ -68,42 +68,42 @@ const cardInfo: CardProps[] = [
     left: false,
     comissioned: true,
   },
-  {
-    name: 'Rosetta Code',
-    description: 'A place where you can translate code between programming languages via GPT-3',
-    link: 'https://rosettacode.netlify.app',
-    type: 'Project Manager',
-    code: 'https://github.com/JoeyMucci/CodeTranslator',
-    featsOne: ['OpenAI API', 'Two Factor Authentication'],
-    featsTwo: ['Translation History', 'Unit Testing', '4 Sprint SDLC'],
-    techs: ['React', 'GraphQL', 'Prisma', 'Jest', 'Jira'],
-    left: true,
-    comissioned: false,
-  },
-  {
-    name: 'Where to Play',
-    description: 'A tool for entrepreneurs to assess the viability of their startup ideas',
-    link: 'https://www.where2play.net',
-    type: 'Project Manager',
-    code: 'https://github.com/orgs/kungfufighters/repositories',
-    featsOne: ['Real-time Collaboration', 'Data Access Control'],
-    featsTwo: ['Outlier Detection', 'Idea Dashboard', '5 Sprint SDLC'],
-    techs: ['NextJS', 'Django Rest', 'MySQL', 'Redis', 'Jira'],
-    left: false,
-    comissioned: true,
-  },
-  {
-    name: 'Sushi Go Clone',
-    description: 'A web adaption of the fast-paced and wildly fun card game Sushi Go Party',
-    link: 'https://sushigo.netlify.app',
-    type: 'Solo',
-    code: 'https://github.com/JoeyMucci/SushiGo',
-    featsOne: ['Computer Difficulty', 'Leaderboard'],
-    featsTwo: ['Achievements', 'Scoring Notifications'],
-    techs: ['React', 'GraphQL', 'Prisma', 'TailwindCSS'],
-    left: true,
-    comissioned: false,
-  },
+//  {
+//    name: 'Rosetta Code',
+//    description: 'A place where you can translate code between programming languages via GPT-3',
+//    link: 'https://rosettacode.netlify.app',
+//    type: 'Project Manager',
+//    code: 'https://github.com/JoeyMucci/CodeTranslator',
+//    featsOne: ['OpenAI API', 'Two Factor Authentication'],
+//    featsTwo: ['Translation History', 'Unit Testing', '4 Sprint SDLC'],
+//    techs: ['React', 'GraphQL', 'Prisma', 'Jest', 'Jira'],
+//    left: true,
+//    comissioned: false,
+//  },
+//  {
+//    name: 'Where to Play',
+//    description: 'A tool for entrepreneurs to assess the viability of their startup ideas',
+//    link: 'https://www.where2play.net',
+//    type: 'Project Manager',
+//    code: 'https://github.com/orgs/kungfufighters/repositories',
+//    featsOne: ['Real-time Collaboration', 'Data Access Control'],
+//    featsTwo: ['Outlier Detection', 'Idea Dashboard', '5 Sprint SDLC'],
+//    techs: ['NextJS', 'Django Rest', 'MySQL', 'Redis', 'Jira'],
+//    left: false,
+//    comissioned: true,
+//  },
+//  {
+//    name: 'Sushi Go Clone',
+//    description: 'A web adaption of the fast-paced and wildly fun card game Sushi Go Party',
+//    link: 'https://sushigo.netlify.app',
+//    type: 'Solo',
+//    code: 'https://github.com/JoeyMucci/SushiGo',
+//    featsOne: ['Computer Difficulty', 'Leaderboard'],
+//    featsTwo: ['Achievements', 'Scoring Notifications'],
+//    techs: ['React', 'GraphQL', 'Prisma', 'TailwindCSS'],
+//    left: true,
+//    comissioned: false,
+//  },
 ];
 
 export const Projects: FC<StyleProps> = ({ main, sec, isFull }) => {
@@ -145,9 +145,11 @@ export const Projects: FC<StyleProps> = ({ main, sec, isFull }) => {
               <Text style={{ color: main }} size="md" fw={900}>
                 {name}
               </Text>
-              <Badge color={main} style={{ color: sec }} size="xs">
-                {type}
-              </Badge>
+	      {/*
+	        <Badge color={main} style={{ color: sec }} size="xs">
+                  {type}
+                </Badge>
+	      */}
             </Group>
             <Text style={{ color: main }} ta="center" size="sm" mt="xs">
               {description}
