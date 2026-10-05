@@ -40,7 +40,7 @@ const cardInfo: CardProps[] = [
   },
   {
     skill: 'SQL',
-    description: `My SQL skills have levelled up since starting at my new job. I've had to adapt and figure out how
+    description: `My SQL skills have levelled up since starting at my current job. I've had to adapt and figure out how
         to write complicated queries for our expansive database. At the same time, I've also become more adept
         at tracing logs and debugging performance issues. I've also used SQL in my education and in my actuarial
         internships, which required dealing with lots of data`,
@@ -49,7 +49,7 @@ const cardInfo: CardProps[] = [
     skill: 'Golang',
     description: `I am dabbling here. I continue to dedicate time to learning Go and completed my world cup prediction side project using it
         for a backend API. I definitely like Go, it requires rigor but is also very flexible. Another
-        thing I really like is the built in support for concurrency, and I think it's a great choice for building scalabale systems`,
+        thing I really like is the built in support for concurrency, and I think it's a great choice for building scalable systems`,
   },
   {
     skill: 'C/C++/C#',
