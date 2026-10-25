@@ -24,13 +24,15 @@ const cardInfo: CardProps[] = [
     time: 'Aug 2025-Present',
     location: 'Remote',
     learnPoints: [
+      'In large software codebases, it is important to make new changes as minimal as possible, and new features should be planned carefully',
       'Integrating newly developed services with a legacy software project is possible, but ample time should be budgeted for it',
       'Sometimes you need to make yourself uncomfortable to learn something new and grow',
       'When deadlines are tight, it is better to be proactive and discuss solutions than to try and power through',
       'Agile teams often have to readjust priorities according to customer needs',
-      'Valuable software products are built to last, and require effort to maintain as they mature',   
+      'Valuable software products are built to last, and require effort to maintain as they mature',
     ],
     doPoints: [
+      `Delivered a Golang microservice for generic background job handling, an important step towards improving application performance`,
       `Implemented the endpoint for soft-deletion of instance records, addressing one of our most reported bugs`,
       `Created a CI pipeline that runs all of our tests before automatically deploying our software for beta releases`,
       `Owned the process of releasing landscape-client into the Ubuntu archive for LTS 26.04 Resolute Raccoon`,
