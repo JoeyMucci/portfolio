@@ -21,7 +21,7 @@ interface BulletProps {
 const pointToDesc = {
   'Applied Mathematics' : `I really enjoyed my coursework in Applied Mathematics at NJIT. Unfortunately,
   between my commitments to collegiate track & field and a Computer Science double major, I did not take as many
-  advanced courses or do as much research as I would have liked. I am interested revisiting applied math through a
+  advanced courses or do as much research as I would have liked. I am planning to revisit applied math through a
   PhD program. I am mostly interested in studying probability & statistics and differential equations & numerical methods.`,
 
   'Software Development': `I love coding and building things so this is
